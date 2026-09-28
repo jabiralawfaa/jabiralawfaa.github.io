@@ -1,552 +1,1630 @@
-<!doctype html>
-<html lang="en" class="scroll-smooth transition duration-300">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio jabiralawfaa</title>
-    <link rel="stylesheet" href="output.css" />
-    <style>
-      /* width */
-      ::-webkit-scrollbar {
-        width: 7px;
-      }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rusydi Jabir Al-awfa — Software Developer & Graphic Designer</title>
+<meta name="description" content="Portfolio of Rusydi Jabir Al-awfa — a software developer and graphic designer working at the intersection of engineering and visual communication." />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet" />
 
-      /* Track */
-      ::-webkit-scrollbar-track {
-        background: #7ef6ff;
-      }
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#000000',
+          paper: '#FFFFFF',
+          stone: {
+            light: '#F5F5F5',
+            mid: '#E5E5E5',
+            dark: '#525252',
+          },
+        },
+        fontFamily: {
+          display: ['"Playfair Display"', 'Georgia', 'serif'],
+          body: ['"Source Serif 4"', 'Georgia', 'serif'],
+          mono: ['"JetBrains Mono"', 'monospace'],
+        },
+        maxWidth: {
+          editorial: '1152px',
+        },
+      },
+    },
+  };
+</script>
 
-      /* Handle */
-      ::-webkit-scrollbar-thumb {
-        background: #00a0b8;
-      }
+<style>
+  :root {
+    --color-ink: #000000;
+    --color-paper: #ffffff;
+    --color-stone-light: #f5f5f5;
+    --color-stone-mid: #e5e5e5;
+    --color-stone-dark: #525252;
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'Source Serif 4', Georgia, serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
 
-      /* Handle on hover */
-      ::-webkit-scrollbar-thumb:hover {
-        background: #00ccff;
-      }
+  /* Strict zero radius */
+  *,
+  *::before,
+  *::after {
+    border-radius: 0 !important;
+  }
 
-      @font-face {
-        font-family: madimi;
-        src: url("font/MadimiOne-Regular.ttf");
-      }
+  html {
+    scroll-behavior: smooth;
+  }
 
-      .madimi {
-        font-family: madimi;
-      }
-    </style>
-  </head>
-  <body class="dark:bg-dark">
-    <!-- header -->
-    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
-      <div class="container">
-        <div class="flex items-center justify-between relative">
-          <div class="px-4">
-            <a href="#home" class="font-bold text-lg text-primary block py-6">
-              <?xml version="1.0" encoding="UTF-8"?>
-              <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-              <!-- Creator: CorelDRAW X7 -->
-              <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" height="38px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-              viewBox="0 0 728 148"
-               xmlns:xlink="http://www.w3.org/1999/xlink">
-               <defs>
-                <style type="text/css">
-                 <![CDATA[
-                  .fil13 {fill:#0040FF}
-                  .fil2 {fill:#0051FF}
-                  .fil1 {fill:#00A2FF}
-                  .fil14 {fill:#00AEFF}
-                  .fil0 {fill:aqua}
-                  .fil3 {fill:#0400FF}
-                  .fil12 {fill:#1E00FF}
-                  .fil4 {fill:#3700FF}
-                  .fil5 {fill:#6200FF}
-                  .fil7 {fill:#9900FF}
-                  .fil6 {fill:#A600FF}
-                  .fil8 {fill:#D000FF}
-                  .fil9 {fill:#F700FF}
-                  .fil11 {fill:#FF006F}
-                  .fil10 {fill:#FF00A6}
-                  .fil15 {fill:url(#id0)}
-                 ]]>
-                </style>
-                <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="28.3863" y1="71.3252" x2="86.5134" y2="132.285">
-                 <stop offset="0" style="stop-opacity:1; stop-color:#A600FF"/>
-                 <stop offset="1" style="stop-opacity:1; stop-color:#4C22B5"/>
-                </linearGradient>
-               </defs>
-               <g id="Layer_x0020_1">
-                <metadata id="CorelCorpID_0Corel-Layer"/>
-                <g id="_393503728">
-                 <path class="fil0" d="M161 75c2,-9 4,-17 6,-25 2,-7 2,-12 2,-14 0,-1 0,-2 0,-2 -1,-1 -1,-1 -2,-1 -2,0 -3,1 -4,2 -1,2 -3,4 -5,7 -2,4 -3,8 -4,12 -2,4 -2,7 -2,10 0,3 1,6 2,8 2,2 4,3 6,3l1 0zm-9 25l-1 0c-6,0 -11,1 -14,3 -4,2 -6,4 -6,7 0,2 1,3 1,4 1,0 2,1 4,1 2,0 5,-2 8,-4 3,-3 6,-6 8,-11zm6 -18c-5,-1 -10,-3 -13,-6 -3,-4 -5,-9 -5,-15 0,-4 1,-9 2,-13 2,-5 4,-9 7,-12 3,-4 6,-7 10,-10 4,-2 8,-3 11,-3 4,0 7,1 9,3 1,3 2,6 2,11 0,6 -1,14 -3,25 -3,10 -6,21 -10,32 0,0 1,0 2,0 1,0 1,0 2,0 0,0 1,0 2,0 1,0 2,0 2,0l-2 6c0,1 -1,1 -2,1 -2,0 -3,0 -3,0 -1,0 -1,0 -2,0 -1,0 -2,0 -3,-1 -4,8 -8,14 -13,18 -5,3 -10,5 -16,5 -4,0 -8,-1 -10,-3 -3,-2 -4,-5 -4,-8 0,-6 3,-11 8,-14 5,-4 11,-5 19,-5 2,0 4,0 4,0 1,0 2,0 3,0l3 -11z"/>
-                 <path class="fil1" d="M222 64c-1,-1 -2,-1 -3,-2 0,0 -1,0 -2,0 -2,0 -4,1 -7,2 -2,2 -5,4 -7,7 -2,3 -4,6 -5,9 -1,3 -2,5 -2,8 0,1 0,2 1,3 0,1 1,1 2,1 4,0 7,-2 11,-7 4,-5 8,-12 12,-21zm-5 19c-3,6 -7,10 -10,13 -4,3 -8,5 -12,5 -1,0 -3,-1 -4,-1 -2,-1 -3,-1 -4,-2 -1,0 -3,1 -5,2 -2,0 -5,0 -8,0l2 -6c2,0 4,0 5,-1 2,0 3,-1 4,-1 0,-1 0,-2 0,-3 0,0 0,-1 0,-2 0,-3 0,-6 1,-9 2,-3 3,-6 5,-9 4,-5 7,-9 11,-11 4,-3 8,-4 13,-4 2,0 4,0 5,1 2,1 3,2 5,3l0 -2c1,-2 1,-2 2,-3 0,0 1,0 1,0 3,0 5,0 6,1 2,1 3,1 3,3 0,0 -1,1 -2,4 -2,3 -3,6 -4,8 -2,5 -4,9 -5,13 -1,3 -2,6 -2,8 0,1 1,2 2,3 1,0 2,1 5,1l-2 6 -1 0c-5,0 -8,0 -10,-1 -2,-1 -4,-3 -4,-6 0,-1 1,-2 1,-4 0,-2 1,-4 2,-6z"/>
-                 <path class="fil2" d="M231 94c2,0 4,-1 6,-1 1,-1 3,-1 4,-2 0,-1 0,-2 0,-3 0,0 0,-1 0,-2 0,-2 1,-8 3,-15 2,-8 4,-16 8,-25 3,-9 5,-15 7,-18 2,-2 4,-3 7,-3 2,0 3,0 4,2 1,1 2,3 2,5 0,3 -1,6 -3,10 -1,3 -4,7 -7,10 -3,8 -6,16 -7,22 -2,7 -3,12 -3,14 0,2 0,3 1,3 1,1 1,1 3,1 3,0 6,-2 8,-6 3,-5 5,-10 5,-16 -2,0 -4,-1 -5,-2 -1,-1 -2,-3 -2,-5 0,-2 1,-4 2,-5 1,-2 3,-2 5,-2 3,0 5,1 7,3 1,3 2,6 2,9 0,9 -2,17 -7,23 -5,6 -11,10 -17,10 -2,0 -4,-1 -6,-1 -2,-1 -3,-2 -4,-3 -2,1 -5,2 -7,2 -2,1 -5,1 -8,1l2 -6z"/>
-                 <path class="fil3" d="M274 100l2 -6c4,0 8,-2 10,-7 3,-4 6,-11 8,-20 0,-2 1,-4 1,-6 1,-5 5,-7 10,-7 1,0 2,0 3,0 1,1 1,1 1,2 0,1 -1,3 -2,6 -1,3 -2,5 -2,6l-5 15 0 0c-1,4 -2,6 -2,7 0,1 1,2 2,3 0,0 2,1 5,1l-2 6 -1 0c-5,0 -8,0 -10,-1 -2,-1 -3,-3 -4,-5 -2,2 -4,3 -6,5 -2,1 -5,1 -8,1zm34 -61c-2,0 -4,-1 -5,-2 -1,-1 -1,-2 -1,-4 0,-3 1,-5 2,-7 2,-1 3,-2 6,-2 1,0 3,0 4,2 1,1 2,2 2,4 0,2 -1,5 -3,6 -1,2 -3,3 -5,3z"/>
-                 <path class="fil4" d="M303 100l2 -6c4,-1 8,-4 11,-8 4,-5 8,-14 12,-26 -1,-1 -1,-1 -2,-2 0,-1 0,-2 0,-3 0,-3 1,-5 2,-6 1,-2 3,-3 5,-3 2,0 3,1 4,2 1,1 2,2 2,4 0,0 0,1 -1,2 0,1 0,1 0,2 1,1 3,2 6,4 5,2 7,5 7,7 0,3 -1,6 -4,12 -2,5 -4,9 -4,11 0,1 1,2 2,3 1,0 3,1 7,1l-2 6 -2 0c-5,0 -10,0 -12,-2 -3,-1 -4,-3 -4,-6 0,-3 1,-7 3,-12 3,-6 4,-9 4,-11 0,0 0,-1 -1,-2 -1,-1 -2,-2 -4,-3 -5,13 -9,22 -14,28 -5,5 -10,8 -17,8z"/>
-                 <path class="fil5" d="M405 76c-5,8 -11,14 -16,18 -5,5 -10,7 -15,7 -5,0 -8,-2 -10,-4 -3,-3 -4,-7 -4,-12 0,-7 2,-15 7,-23 6,-9 12,-17 21,-23 5,-5 12,-8 19,-11 7,-3 12,-5 15,-5 1,0 2,1 4,3 1,1 2,3 2,4 0,1 -1,1 -3,1 -1,0 -2,0 -3,0 -3,1 -6,2 -9,4 -4,1 -7,3 -11,6 -4,3 -8,7 -12,11 -4,4 -7,9 -10,14 -3,4 -4,7 -6,10 -1,3 -1,5 -1,7 0,3 0,5 2,6 1,1 2,2 4,2 4,0 9,-3 15,-9 5,-6 11,-14 16,-24 2,-5 5,-11 7,-17 1,-1 1,-2 1,-2 1,-1 1,-2 2,-3 1,0 1,-1 3,-1 1,0 3,1 4,2 2,0 2,1 2,2 0,1 -1,3 -2,7 -2,5 -4,9 -6,13 -3,8 -5,14 -7,20 -2,5 -3,8 -3,10 0,2 1,3 2,4 1,0 3,1 6,1l-2 6 -2 0c-5,0 -9,0 -11,-1 -2,-2 -3,-4 -3,-7 0,-2 1,-8 4,-16l0 0z"/>
-                 <path class="fil6" d="M417 100l2 -6c1,0 3,-1 5,-2 2,-1 4,-2 7,-4 1,-8 2,-16 4,-24 2,-7 4,-15 7,-23 2,-6 4,-11 6,-13 2,-3 4,-4 6,-4 2,0 3,1 5,2 1,1 1,3 1,5 0,3 -1,6 -3,10 -2,4 -4,8 -8,12 -2,8 -4,15 -6,22 -1,7 -2,12 -2,14 0,2 1,3 1,4 1,0 3,1 5,1l-2 6 -1 0c-4,0 -7,0 -9,-1 -2,-1 -3,-3 -4,-5 -2,2 -4,4 -7,5 -2,1 -5,1 -7,1z"/>
-                 <path class="fil7" d="M493 64c-1,-1 -2,-1 -3,-2 -1,0 -2,0 -3,0 -2,0 -4,1 -6,2 -3,2 -5,4 -8,7 -2,3 -3,6 -5,9 -1,3 -1,5 -1,8 0,1 0,2 0,3 1,1 2,1 3,1 3,0 7,-2 11,-7 3,-5 7,-12 12,-21zm-5 19c-4,6 -7,10 -11,13 -3,3 -7,5 -11,5 -2,0 -3,-1 -5,-1 -1,-1 -2,-1 -3,-2 -2,0 -4,1 -6,2 -2,0 -4,0 -7,0l2 -6c2,0 3,0 5,-1 1,0 2,-1 4,-1 -1,-1 -1,-2 -1,-3 0,0 0,-1 0,-2 0,-3 1,-6 2,-9 1,-3 3,-6 5,-9 3,-5 7,-9 11,-11 4,-3 8,-4 12,-4 2,0 4,0 6,1 1,1 3,2 4,3l1 -2c0,-2 1,-2 1,-3 1,0 1,0 2,0 2,0 4,0 6,1 2,1 2,1 2,3 0,0 0,1 -2,4 -1,3 -2,6 -3,8 -3,5 -4,9 -5,13 -1,3 -2,6 -2,8 0,1 0,2 1,3 1,0 3,1 6,1l-2 6 -1 0c-5,0 -9,0 -11,-1 -2,-1 -3,-3 -3,-6 0,-1 0,-2 1,-4 0,-2 1,-4 2,-6z"/>
-                 <path class="fil8" d="M500 100l2 -6c2,0 3,0 5,-1 1,0 2,0 3,-1 0,-1 0,-2 0,-3 0,-1 0,-2 0,-2 0,-3 0,-7 2,-12 1,-5 3,-10 6,-16 1,-3 2,-4 3,-5 1,-1 2,-1 4,-1 2,0 4,0 5,1 1,1 2,1 2,2 0,1 -1,3 -2,5 -2,3 -3,5 -4,8 -2,3 -3,7 -4,10 -1,3 -1,6 -1,8 0,2 0,3 0,3 1,1 1,1 3,1 1,0 2,0 4,-1 2,-2 4,-3 6,-6 0,-3 1,-6 2,-10 1,-4 2,-7 4,-11 0,-1 1,-2 1,-3 1,0 2,0 4,0 2,0 3,0 5,0 1,1 2,2 2,3 0,0 -1,1 -2,3 -1,2 -2,5 -3,7 -1,4 -2,7 -2,9 -1,2 -1,4 -1,5 0,2 0,3 1,4 0,1 1,1 2,1 3,0 5,-2 8,-6 4,-5 6,-10 7,-16 -1,-1 -2,-2 -3,-3 -1,-1 -1,-2 -1,-4 0,-3 1,-5 2,-7 1,-1 3,-2 6,-2 2,0 3,1 5,2 1,1 1,3 1,6 0,2 0,6 -2,10 -1,5 -3,9 -5,13 -3,5 -7,9 -10,12 -3,2 -7,4 -10,4 -3,0 -6,-1 -8,-2 -1,-2 -3,-4 -3,-6 -3,3 -5,5 -8,6 -2,1 -4,2 -6,2 -1,0 -2,-1 -3,-1 -2,-1 -3,-1 -4,-2 -2,1 -4,1 -6,2 -2,0 -4,0 -7,0z"/>
-                 <path class="fil9" d="M591 79c3,-3 7,-7 10,-11 3,-5 5,-9 8,-15 2,-4 4,-7 5,-11 1,-3 1,-5 1,-7 0,-1 0,-1 0,-2 -1,-1 -2,-1 -2,-1 -3,0 -6,4 -9,11 -3,7 -8,19 -13,36zm-3 10c-2,6 -3,10 -4,15 -1,4 -1,7 -1,8 0,1 0,2 0,3 1,0 2,1 2,1 2,0 4,-2 5,-5 2,-3 3,-8 4,-14 -2,0 -3,-2 -4,-3 -1,-2 -2,-3 -2,-5l0 0zm-12 8c-1,1 -3,2 -4,3 -2,0 -4,0 -5,0l1 -6c6,-1 10,-6 13,-17 1,-2 1,-3 2,-4 5,-18 10,-31 15,-38 5,-8 10,-11 15,-11 4,0 6,1 8,3 2,2 3,5 3,9 0,8 -3,16 -8,24 -6,9 -13,17 -22,24 2,1 4,2 5,3 1,2 2,4 3,6 1,1 2,1 3,1 1,0 2,0 3,0 1,0 1,0 1,0 1,0 2,0 3,0l-2 6c0,1 -1,1 -1,1 0,0 -1,0 -2,0 0,0 -1,0 -2,-1 -1,0 -2,0 -3,0 -1,7 -3,13 -7,18 -3,5 -7,7 -12,7 -4,0 -6,-1 -8,-3 -1,-2 -2,-5 -2,-8 0,-2 0,-5 1,-7 0,-3 1,-6 2,-10z"/>
-                 <path class="fil10" d="M658 64c-1,-1 -2,-1 -3,-2 -1,0 -2,0 -2,0 -2,0 -5,1 -7,2 -3,2 -5,4 -7,7 -2,3 -4,6 -5,9 -2,3 -2,5 -2,8 0,1 0,2 1,3 0,1 1,1 2,1 3,0 7,-2 11,-7 4,-5 8,-12 12,-21zm-5 19c-4,6 -7,10 -11,13 -3,3 -7,5 -11,5 -2,0 -3,-1 -5,-1 -1,-1 -2,-1 -3,-2 -2,0 -3,1 -6,2 -2,0 -4,0 -7,0l2 -6c2,0 3,0 5,-1 1,0 3,-1 4,-1 0,-1 0,-2 -1,-3 0,0 0,-1 0,-2 0,-3 1,-6 2,-9 1,-3 3,-6 5,-9 3,-5 7,-9 11,-11 4,-3 8,-4 12,-4 3,0 4,0 6,1 2,1 3,2 4,3l1 -2c0,-2 1,-2 1,-3 1,0 1,0 2,0 2,0 4,0 6,1 2,1 3,1 3,3 0,0 -1,1 -2,4 -2,3 -3,6 -4,8 -2,5 -4,9 -5,13 -1,3 -2,6 -2,8 0,1 1,2 1,3 1,0 3,1 6,1l-2 6 -1 0c-5,0 -8,0 -11,-1 -2,-1 -3,-3 -3,-6 0,-1 0,-2 1,-4 0,-2 1,-4 2,-6z"/>
-                 <path class="fil11" d="M713 64c-1,-1 -2,-1 -3,-2 -1,0 -1,0 -2,0 -2,0 -5,1 -7,2 -3,2 -5,4 -7,7 -2,3 -4,6 -5,9 -1,3 -2,5 -2,8 0,1 0,2 1,3 0,1 1,1 2,1 4,0 7,-2 11,-7 4,-5 8,-12 12,-21zm-5 19c-4,6 -7,10 -11,13 -3,3 -7,5 -11,5 -1,0 -3,-1 -5,-1 -1,-1 -2,-1 -3,-2 -1,0 -3,1 -5,2 -3,0 -5,0 -8,0l2 -6c2,0 4,0 5,-1 1,0 3,-1 4,-1 0,-1 0,-2 0,-3 0,0 -1,-1 -1,-2 0,-3 1,-6 2,-9 1,-3 3,-6 5,-9 4,-5 7,-9 11,-11 4,-3 8,-4 13,-4 2,0 4,0 5,1 2,1 3,2 4,3l1 -2c1,-2 1,-2 1,-3 1,0 1,0 2,0 3,0 5,0 6,1 2,1 3,1 3,3 0,0 -1,1 -2,4 -2,3 -3,6 -4,8 -2,5 -4,9 -5,13 -1,3 -2,6 -2,8 0,1 1,2 2,3 0,0 2,1 5,1l-2 6 -1 0c-5,0 -8,0 -10,-1 -3,-1 -4,-3 -4,-6 0,-1 1,-2 1,-4 0,-2 1,-4 2,-6z"/>
-                 <path class="fil12" d="M52 135c5,8 14,13 24,13 16,0 28,-13 28,-29 0,-7 -2,-13 -6,-18l0 0 0 0c-1,0 -1,0 -1,0 -32,-38 -38,-63 -39,-101 -20,57 -18,118 -6,135l0 0z"/>
-                 <path class="fil13" d="M55 139c7,6 16,10 26,8 15,-2 25,-17 23,-32 -1,-7 -5,-13 -10,-17l0 0 0 0c0,0 0,0 0,-1 -38,-31 -49,-55 -56,-92 -10,60 2,120 17,134l0 0z"/>
-                 <path class="fil14" d="M59 142c7,6 17,7 26,4 15,-5 23,-22 17,-36 -2,-7 -7,-12 -12,-15l0 0 0 0c0,0 0,0 -1,0 -43,-24 -57,-46 -71,-82 1,61 24,118 41,129l0 0z"/>
-                 <path class="fil0" d="M63 145c8,4 18,4 27,-1 13,-8 18,-25 10,-39 -3,-6 -9,-10 -15,-12l0 0 0 0c0,0 0,0 0,0 -47,-16 -65,-35 -85,-67 11,59 44,111 63,119l0 0z"/>
-                 <path class="fil15" d="M70 135c5,2 11,1 16,-3 7,-5 9,-16 3,-24 -3,-3 -6,-5 -10,-6l0 0 0 0c0,0 0,0 0,0 -30,-6 -42,-16 -57,-34 12,35 36,64 48,67l0 0z"/>
-                </g>
-               </g>
-              </svg>
-            </a>
+  body {
+    font-family: var(--font-body);
+    background: var(--color-paper);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'ss01', 'ss02', 'kern';
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Typography scales */
+  .text-mega {
+    font-size: clamp(3.5rem, 17vw, 15rem);
+    line-height: 0.82;
+    letter-spacing: -0.045em;
+  }
+  .text-display {
+    font-size: clamp(2.75rem, 9vw, 7.5rem);
+    line-height: 0.9;
+    letter-spacing: -0.035em;
+  }
+  .text-headline {
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 0.95;
+    letter-spacing: -0.025em;
+  }
+  .text-large {
+    font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+  .editorial-lead {
+    font-size: clamp(1.15rem, 1.6vw, 1.5rem);
+    line-height: 1.45;
+    letter-spacing: -0.005em;
+  }
+
+  /* Mono labels */
+  .label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    line-height: 1.4;
+  }
+  .label-lg {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    line-height: 1.4;
+  }
+
+  /* Tabular figures for numbers */
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Selection */
+  ::selection {
+    background: var(--color-ink);
+    color: var(--color-paper);
+  }
+
+  /* Focus visible */
+  *:focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 4px;
+  }
+  .inverted *:focus-visible {
+    outline-color: var(--color-paper);
+  }
+
+  /* Skip link */
+  .skip-link {
+    position: absolute;
+    top: -200px;
+    left: 0;
+    background: var(--color-ink);
+    color: var(--color-paper);
+    padding: 12px 20px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    z-index: 1000;
+    transition: top 0.2s ease;
+  }
+  .skip-link:focus {
+    top: 0;
+  }
+
+  /* Hover inversion primitive */
+  .hover-invert {
+    transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  }
+  .hover-invert:hover {
+    background-color: var(--color-ink);
+    color: var(--color-paper);
+  }
+  .hover-invert:hover .hover-arrow {
+    transform: translateX(4px);
+  }
+
+  /* Underline grow */
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 1px;
+    transition: background-size 0.35s ease;
+    padding-bottom: 2px;
+  }
+  .link-underline:hover {
+    background-size: 100% 1px;
+  }
+
+  /* Project entry hover */
+  .project-row {
+    transition: padding-left 0.3s ease, background-color 0.3s ease;
+  }
+  .project-row:hover {
+    padding-left: 1.25rem;
+  }
+  .project-row:hover .project-row-arrow {
+    transform: translateX(8px);
+  }
+  .project-row-arrow {
+    transition: transform 0.3s ease;
+  }
+
+  /* Image zoom container */
+  .image-frame {
+    overflow: hidden;
+    position: relative;
+  }
+  .image-frame img {
+    transition: transform 0.7s cubic-bezier(0.2, 0.6, 0.2, 1);
+    filter: grayscale(100%);
+  }
+  .image-frame:hover img {
+    transform: scale(1.04);
+  }
+  .image-frame.color-img img {
+    filter: grayscale(0%);
+  }
+
+  /* Inverted section */
+  .inverted {
+    background: var(--color-ink);
+    color: var(--color-paper);
+  }
+
+  /* Marquee for tech */
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  .marquee-track {
+    animation: marquee 60s linear infinite;
+    will-change: transform;
+  }
+  .marquee-container:hover .marquee-track {
+    animation-play-state: paused;
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+    .marquee-track {
+      animation: none !important;
+    }
+    .image-frame:hover img {
+      transform: none !important;
+    }
+  }
+
+  /* Sticky header bg blur fallback */
+  .header-bg {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: saturate(140%) blur(8px);
+    -webkit-backdrop-filter: saturate(140%) blur(8px);
+  }
+
+  /* Touch target minimum */
+  @media (pointer: coarse) {
+    a,
+    button {
+      min-height: 44px;
+      min-width: 44px;
+    }
+  }
+
+  /* Custom marker for lists */
+  .editorial-list > li {
+    position: relative;
+    padding-left: 1.5rem;
+  }
+  .editorial-list > li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.65em;
+    width: 8px;
+    height: 1px;
+    background: currentColor;
+  }
+</style>
+</head>
+<body class="bg-paper text-ink">
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<!-- ============== HEADER ============== -->
+<header class="sticky top-0 z-50 header-bg border-b border-ink">
+  <div class="max-w-editorial mx-auto px-6 md:px-10 py-4 flex items-center justify-between gap-6">
+    <a href="#hero" class="font-display text-lg md:text-xl font-bold tracking-tight leading-none flex items-baseline">
+      RJA<span class="text-stone-dark">.</span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-7" aria-label="Primary">
+      <a href="#work" class="label hover-invert px-2 py-1 inline-flex items-baseline gap-1.5">
+        <span class="text-stone-dark tabular">03</span> Work
+      </a>
+      <a href="#development" class="label hover-invert px-2 py-1 inline-flex items-baseline gap-1.5">
+        <span class="text-stone-dark tabular">04</span> Development
+      </a>
+      <a href="#design" class="label hover-invert px-2 py-1 inline-flex items-baseline gap-1.5">
+        <span class="text-stone-dark tabular">05</span> Design
+      </a>
+      <a href="#lab" class="label hover-invert px-2 py-1 inline-flex items-baseline gap-1.5">
+        <span class="text-stone-dark tabular">06</span> Lab
+      </a>
+      <a href="#research" class="label hover-invert px-2 py-1 inline-flex items-baseline gap-1.5">
+        <span class="text-stone-dark tabular">07</span> Research
+      </a>
+    </nav>
+
+    <a href="#contact" class="label border border-ink px-3 py-2 hover-invert inline-flex items-center gap-2">
+      <span class="w-1.5 h-1.5 bg-ink"></span>
+      Available
+    </a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============== 01 — HERO ============== -->
+<section id="hero" class="min-h-[calc(100vh-65px)] flex flex-col px-6 md:px-10 pt-10 md:pt-12 pb-6 md:pb-8">
+  <div class="max-w-editorial mx-auto w-full flex-1 flex flex-col">
+
+    <!-- Top metadata row -->
+    <div class="flex items-start justify-between gap-6 pb-6 md:pb-8 border-b border-ink">
+      <div class="flex flex-col gap-1">
+        <span class="label">Portfolio — Index 2024</span>
+        <span class="label text-stone-dark">Volume 01 / Edition I</span>
+      </div>
+      <div class="flex flex-col gap-1 text-right">
+        <span class="label">Indonesia · GMT+7</span>
+        <span class="label text-stone-dark">Available for select projects</span>
+      </div>
+    </div>
+
+    <!-- Massive name typography -->
+    <div class="flex-1 flex flex-col justify-center py-8 md:py-12">
+      <div class="label mb-6 md:mb-10">01 — Introduction</div>
+
+      <h1 class="font-display font-black text-mega">
+        <span class="block">Rusydi</span>
+        <span class="block italic font-normal pl-[8%] md:pl-[14%]">Jabir</span>
+        <span class="block pl-[3%] md:pl-[6%]">Al-Awfa<span class="font-display text-stone-dark">.</span></span>
+      </h1>
+    </div>
+
+    <!-- Bottom: subtitle + CTAs -->
+    <div class="grid grid-cols-12 gap-y-8 gap-x-4 pt-6 md:pt-8 border-t border-ink">
+      <div class="col-span-12 md:col-span-7">
+        <p class="editorial-lead max-w-2xl">
+          Software Developer &amp; Graphic Designer building digital products
+          at the intersection of <em class="font-display italic">engineering</em>
+          and <em class="font-display italic">visual communication</em>.
+        </p>
+      </div>
+
+      <div class="col-span-12 md:col-span-4 md:col-start-9 flex flex-col gap-3 self-end">
+        <a href="#work" class="group flex items-center justify-between border border-ink px-4 py-3 hover-invert">
+          <span class="label-lg">Explore Work</span>
+          <span class="label hover-arrow transition-transform inline-block">↓</span>
+        </a>
+        <a href="#contact" class="group flex items-center justify-between px-4 py-3 hover-invert border border-ink">
+          <span class="label-lg">Get in touch</span>
+          <span class="label hover-arrow transition-transform inline-block">→</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="hidden md:flex items-center justify-between mt-6 pt-4 border-t border-stone-mid">
+      <span class="label text-stone-dark">Scroll to begin</span>
+      <span class="label text-stone-dark tabular">001 / 010</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 02 — ABOUT / PROFILE ============== -->
+<section id="about" class="px-6 md:px-10 py-24 md:py-32 border-t border-ink">
+  <div class="max-w-editorial mx-auto w-full">
+
+    <!-- Section header -->
+    <div class="flex items-end justify-between gap-6 pb-6 md:pb-8 border-b border-ink mb-12 md:mb-20">
+      <div>
+        <div class="label mb-3">02 — Profile</div>
+        <h2 class="font-display font-black text-headline">About</h2>
+      </div>
+      <div class="label text-stone-dark text-right hidden md:block">
+        The person<br />behind the work
+      </div>
+    </div>
+
+    <!-- Editorial composition -->
+    <div class="grid grid-cols-12 gap-y-12 md:gap-y-0 gap-x-4">
+
+      <!-- Left: large statement -->
+      <div class="col-span-12 md:col-span-7">
+        <h3 class="font-display font-black text-display">
+          <span class="block">Code</span>
+          <span class="block italic font-normal text-stone-dark pl-[8%]">meets</span>
+          <span class="block">Design<span class="text-stone-dark">.</span></span>
+        </h3>
+      </div>
+
+      <!-- Right: supporting paragraph + metadata -->
+      <div class="col-span-12 md:col-span-4 md:col-start-9 flex flex-col gap-8">
+        <p class="editorial-lead">
+          I am a software developer with a parallel life in visual design.
+          My work moves between <em class="font-display italic">frontend engineering</em>,
+          interface implementation, and graphic composition — treating each
+          as part of the same practice rather than separate disciplines.
+        </p>
+
+        <p class="text-stone-dark leading-relaxed">
+          I build web applications with React and Laravel, design identities
+          and artwork, and run small experiments in music and creative coding.
+          The space where engineering and visual thinking overlap is where
+          I am most useful.
+        </p>
+
+        <div class="grid grid-cols-2 gap-x-4 gap-y-4 pt-6 border-t border-ink">
+          <div>
+            <div class="label text-stone-dark mb-1">Based</div>
+            <div class="font-body">Indonesia</div>
           </div>
-          <div class="flex items-center px-4">
-            <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
-              <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
-              <span class="hamburger-line transition duration-300 ease-in-out"></span>
-              <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
-            </button>
-
-            <nav
-              id="nav-menu"
-              class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none dark:bg-dark dark:shadow-slate-700 lg:dark:bg-transparent"
-            >
-              <ul class="block lg:flex madimi">
-                <li class="group">
-                  <a href="#home" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Beranda</a>
-                </li>
-                <li class="group">
-                  <a href="#about" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Tentang Saya</a>
-                </li>
-                <li class="group">
-                  <a href="#portfolio" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Portfolio</a>
-                </li>
-                <li class="group">
-                  <a href="#clients" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Thanks For</a>
-                </li>
-                <li class="group">
-                  <a href="#blog" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Blog</a>
-                </li>
-                <li class="group">
-                  <a href="#kontak" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Contact</a>
-                </li>
-                <li class="flex items-center pl-8">
-                  <div class="flex">
-                    <a href="#" id="darktoggle">
-                      <img src="img/backicon-regular.svg" alt="light" class="h-9 w-9" id="ltoggle" />
-                      <img src="img/backicon-dark.svg" alt="dark" class="h-9 w-9 hidden" id="dtoggle" />
-                    </a>
-                  </div>
-                </li>
-              </ul>
-            </nav>
+          <div>
+            <div class="label text-stone-dark mb-1">Focus</div>
+            <div class="font-body">Frontend · Design</div>
+          </div>
+          <div>
+            <div class="label text-stone-dark mb-1">Stack</div>
+            <div class="font-body">React · Laravel</div>
+          </div>
+          <div>
+            <div class="label text-stone-dark mb-1">Status</div>
+            <div class="font-body">Open to work</div>
           </div>
         </div>
       </div>
-    </header>
-    <!-- akhir header -->
+    </div>
+  </div>
+</section>
 
-    <!-- hero -->
-    <section id="home" class="pt-36 dark:bg-dark">
-      <div class="container">
-        <div class="flex flex-wrap">
-          <div class="w-full self-center px-4 lg:w-1/2">
-            <h1 class="text-base font-semibold text-primary md:text-xl lg:text-2xl">
-              <span class="madimi">Assalamualaikum wr. wb , nama saya</span> <span class="block font-bold text-dark text-4xl mt-1 lg:text-5xl dark:text-white">Rusydi Jabir Alawfa</span>
-            </h1>
-            <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl madimi"><span class="text-dark dark:text-white">Web</span> Designer & <span class="text-dark dark:text-white">Vector</span> Designer</h2>
-            <p class="font-medium text-secondary mb-10 leading-relaxed">Membuat desain web dan menggambar vektor itu mudah dan menyenangkan bukan, <span class="text-dark font-semibold dark:text-white">Bukan!!</span></p>
-            <a href="#" class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:opacity-70 hover:shadow-lg transition duration-300 ease-in-out">Hubungi Saya</a>
+<!-- ============== 03 — SELECTED WORK ============== -->
+<section id="work" class="px-6 md:px-10 py-24 md:py-32 border-t border-ink">
+  <div class="max-w-editorial mx-auto w-full">
+
+    <!-- Section header -->
+    <div class="flex items-end justify-between gap-6 pb-6 md:pb-8 border-b border-ink mb-12 md:mb-20">
+      <div>
+        <div class="label mb-3">03 — Selected Work</div>
+        <h2 class="font-display font-black text-headline">Projects</h2>
+      </div>
+      <div class="label text-stone-dark text-right hidden md:block">
+        Index of<br />selected work
+      </div>
+    </div>
+
+    <!-- Intro line -->
+    <div class="grid grid-cols-12 gap-4 mb-16 md:mb-24">
+      <div class="col-span-12 md:col-span-8">
+        <p class="editorial-lead">
+          A selection of work spanning web applications, developer tools,
+          academic research, and visual projects. Each entry is labelled by
+          category, technology, and year — not by ranking.
+        </p>
+      </div>
+      <div class="col-span-12 md:col-span-2 md:col-start-11 self-end">
+        <div class="label text-stone-dark text-right">Works<br />2018 — 2024</div>
+      </div>
+    </div>
+
+    <!-- Featured project: LokaHub -->
+    <article class="grid grid-cols-12 gap-y-8 md:gap-x-4 mb-20 md:mb-28">
+      <div class="col-span-12 md:col-span-7">
+        <div class="image-frame aspect-wide border border-ink">
+          <img src="https://picsum.photos/seed/lokahub-feature/1600/1000" alt="LokaHub web application interface preview" class="w-full h-full object-cover" />
+        </div>
+      </div>
+      <div class="col-span-12 md:col-span-4 md:col-start-9 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between border-b border-ink pb-3 mb-6">
+            <span class="label">Featured</span>
+            <span class="label tabular">01 / 08</span>
           </div>
-          <div class="w-full self-end px-4 lg:w-1/2">
-            <div class="relative mt-10 lg:mt-9 lg:right-0">
-              <img width="400" height="400" src="img/pp.png" alt="jabiralawfaa" class="max-w-full mx-auto relative z-10" />
-              <span class="absolute -bottom-0 left-1/2 -translate-x-1/2 md:scale-125" id="backiconlight">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  xml:space="preserve"
-                  width="350px"
-                  height="350px"
-                  version="1.1"
-                  style="shape-rendering: geometricPrecision; text-rendering: geometricPrecision; image-rendering: optimizeQuality; fill-rule: evenodd; clip-rule: evenodd"
-                  viewBox="0 0 900 900"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                >
-                  <defs>
-                    <style type="text/css">
-                      <![CDATA[
-                       .fil0 {fill:#06b6d4}
-                      ]]>
-                    </style>
-                  </defs>
-                  <g id="Layer_x0020_1">
-                    <metadata id="CorelCorpID_0Corel-Layer" />
-                    <g id="_406084464">
-                      <polygon class="fil0" points="448,180 531,143 450,31 367,144 " />
-                      <polygon class="fil0" points="215,317 225,226 87,241 143,369 " />
-                      <polygon class="fil0" points="674,225 683,313 756,367 813,241 " />
-                      <polygon class="fil0" points="757,531 685,583 675,674 813,659 " />
-                      <polygon class="fil0" points="226,675 217,587 144,533 87,659 " />
-                      <polygon class="fil0" points="452,720 369,757 450,869 533,756 " />
-                      <path class="fil0" d="M264 450c0,103 83,186 186,186 103,0 186,-83 186,-186 0,-103 -83,-186 -186,-186 -103,0 -186,83 -186,186z" />
-                    </g>
-                  </g>
-                </svg>
-              </span>
-              <span class="absolute -bottom-0 left-1/2 -translate-x-1/2 md:scale-125 hidden" id="backicondark">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  xml:space="preserve"
-                  width="350px"
-                  height="350px"
-                  version="1.1"
-                  style="shape-rendering: geometricPrecision; text-rendering: geometricPrecision; image-rendering: optimizeQuality; fill-rule: evenodd; clip-rule: evenodd"
-                  viewBox="0 0 900 900"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                >
-                  <defs>
-                    <style type="text/css">
-                      <![CDATA[
-                       .fil0 {fill:#09C6DB}
-                      ]]>
-                    </style>
-                  </defs>
-                  <g id="Layer_x0020_1">
-                    <metadata id="CorelCorpID_0Corel-Layer" />
-                    <g id="_406102080">
-                      <path
-                        class="fil0"
-                        d="M404 235c168,0 303,136 303,303 0,128 -78,237 -190,282 174,-32 306,-184 306,-367 0,-206 -167,-373 -373,-373 -206,0 -373,167 -373,373 0,52 11,101 30,146 -4,-20 -6,-40 -6,-61 0,-167 136,-303 303,-303z"
-                      />
-                      <path class="fil0" d="M631 538c0,-125 -102,-227 -227,-227 -125,0 -227,102 -227,227 0,126 102,227 227,227 125,0 227,-101 227,-227z" />
-                    </g>
-                  </g>
-                </svg>
-              </span>
+
+          <div class="label text-stone-dark mb-2">Web Application · Development</div>
+          <h3 class="font-display font-black text-large mb-4">LokaHub</h3>
+          <p class="text-stone-dark leading-relaxed mb-6">
+            A community-oriented web platform built around local interaction,
+            discovery, and shared resources. Designed and developed
+            end-to-end with a focus on clarity and accessible interface patterns.
+          </p>
+
+          <div class="grid grid-cols-2 gap-x-4 gap-y-3 mb-6">
+            <div>
+              <div class="label text-stone-dark mb-1">Stack</div>
+              <div class="font-body text-sm">React · Laravel · Firebase</div>
             </div>
+            <div>
+              <div class="label text-stone-dark mb-1">Year</div>
+              <div class="font-body text-sm tabular">2024</div>
+            </div>
+            <div>
+              <div class="label text-stone-dark mb-1">Type</div>
+              <div class="font-body text-sm">Personal Project</div>
+            </div>
+            <div>
+              <div class="label text-stone-dark mb-1">Role</div>
+              <div class="font-body text-sm">Design & Development</div>
+            </div>
+          </div>
+        </div>
+
+        <a href="#" class="group inline-flex items-center justify-between border border-ink px-4 py-3 hover-invert">
+          <span class="label-lg">View project</span>
+          <span class="label hover-arrow">→</span>
+        </a>
+      </div>
+    </article>
+
+    <!-- Editorial project list -->
+    <div class="border-t border-ink">
+
+      <!-- Project 02 -->
+      <a href="#" class="project-row block border-b border-ink py-6 md:py-8 group">
+        <div class="grid grid-cols-12 gap-4 items-baseline">
+          <div class="col-span-2 md:col-span-1">
+            <span class="label tabular text-stone-dark">02</span>
+          </div>
+          <div class="col-span-10 md:col-span-4">
+            <h3 class="font-display font-bold text-2xl md:text-3xl leading-tight">Portfolio Builder</h3>
+          </div>
+          <div class="col-span-7 md:col-span-3">
+            <p class="text-sm text-stone-dark leading-relaxed">A tool for assembling personal portfolio sites from structured content.</p>
+          </div>
+          <div class="col-span-3 md:col-span-2 label text-stone-dark">
+            React · Vite
+          </div>
+          <div class="col-span-2 md:col-span-1 label tabular text-stone-dark text-right">2024</div>
+          <div class="hidden md:block col-span-1 text-right">
+            <span class="label project-row-arrow inline-block">→</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Project 03 -->
+      <a href="#" class="project-row block border-b border-ink py-6 md:py-8 group">
+        <div class="grid grid-cols-12 gap-4 items-baseline">
+          <div class="col-span-2 md:col-span-1">
+            <span class="label tabular text-stone-dark">03</span>
+          </div>
+          <div class="col-span-10 md:col-span-4">
+            <h3 class="font-display font-bold text-2xl md:text-3xl leading-tight">Wedding Invitation Website</h3>
+          </div>
+          <div class="col-span-7 md:col-span-3">
+            <p class="text-sm text-stone-dark leading-relaxed">Digital wedding invitation platform with RSVP and guest management.</p>
+          </div>
+          <div class="col-span-3 md:col-span-2 label text-stone-dark">
+            Laravel · PHP
+          </div>
+          <div class="col-span-2 md:col-span-1 label tabular text-stone-dark text-right">2024</div>
+          <div class="hidden md:block col-span-1 text-right">
+            <span class="label project-row-arrow inline-block">→</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Project 04 -->
+      <a href="#" class="project-row block border-b border-ink py-6 md:py-8 group">
+        <div class="grid grid-cols-12 gap-4 items-baseline">
+          <div class="col-span-2 md:col-span-1">
+            <span class="label tabular text-stone-dark">04</span>
+          </div>
+          <div class="col-span-10 md:col-span-4">
+            <h3 class="font-display font-bold text-2xl md:text-3xl leading-tight">Laravel &amp; PHP Packages</h3>
+          </div>
+          <div class="col-span-7 md:col-span-3">
+            <p class="text-sm text-stone-dark leading-relaxed">Reusable packages and utilities for Laravel workflows.</p>
+          </div>
+          <div class="col-span-3 md:col-span-2 label text-stone-dark">
+            Laravel · PHP
+          </div>
+          <div class="col-span-2 md:col-span-1 label tabular text-stone-dark text-right">2024</div>
+          <div class="hidden md:block col-span-1 text-right">
+            <span class="label project-row-arrow inline-block">→</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Project 05 -->
+      <a href="#" class="project-row block border-b border-ink py-6 md:py-8 group">
+        <div class="grid grid-cols-12 gap-4 items-baseline">
+          <div class="col-span-2 md:col-span-1">
+            <span class="label tabular text-stone-dark">05</span>
+          </div>
+          <div class="col-span-10 md:col-span-4">
+            <h3 class="font-display font-bold text-2xl md:text-3xl leading-tight">GitHub SDK Experiments</h3>
+          </div>
+          <div class="col-span-7 md:col-span-3">
+            <p class="text-sm text-stone-dark leading-relaxed">Explorations around GitHub API integration and developer tooling.</p>
+          </div>
+          <div class="col-span-3 md:col-span-2 label text-stone-dark">
+            JavaScript · API
+          </div>
+          <div class="col-span-2 md:col-span-1 label tabular text-stone-dark text-right">2024</div>
+          <div class="hidden md:block col-span-1 text-right">
+            <span class="label project-row-arrow inline-block">→</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Split layout project -->
+    <article class="grid grid-cols-12 gap-y-8 md:gap-x-4 mt-20 md:mt-28">
+      <div class="col-span-12 md:col-span-5">
+        <div class="image-frame aspect-portrait border border-ink">
+          <img src="https://picsum.photos/seed/album-artwork/1200/1600" alt="Album artwork visual preview" class="w-full h-full object-cover" />
+        </div>
+      </div>
+      <div class="col-span-12 md:col-span-6 md:col-start-7 flex flex-col justify-center">
+        <div class="flex items-center justify-between border-b border-ink pb-3 mb-6">
+          <span class="label">Design · Visual</span>
+          <span class="label tabular">06 / 08</span>
+        </div>
+        <div class="label text-stone-dark mb-2">Creative · Visual</div>
+        <h3 class="font-display font-black text-large mb-4">Album Artwork Series</h3>
+        <p class="text-stone-dark leading-relaxed mb-6 max-w-md">
+          A series of cover artwork exploring typographic and photographic
+          composition. The project doubles as a testing ground for visual
+          systems that later feed back into interface work.
+        </p>
+        <div class="grid grid-cols-2 gap-x-4 gap-y-3 mb-6 max-w-md">
+          <div>
+            <div class="label text-stone-dark mb-1">Discipline</div>
+            <div class="font-body text-sm">Graphic Design</div>
+          </div>
+          <div>
+            <div class="label text-stone-dark mb-1">Year</div>
+            <div class="font-body text-sm tabular">2024</div>
+          </div>
+        </div>
+        <a href="#" class="group inline-flex items-center gap-3 self-start px-4 py-3 hover-invert border border-ink">
+          <span class="label-lg">View series</span>
+          <span class="label hover-arrow">→</span>
+        </a>
+      </div>
+    </article>
+
+    <!-- Full-bleed research project -->
+    <article class="mt-20 md:mt-28">
+      <div class="relative image-frame aspect-cinema border border-ink">
+        <img src="https://picsum.photos/seed/research-headless/2400/1030" alt="Headless low-code architecture diagram preview" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-ink/40 flex flex-col justify-end p-6 md:p-12">
+          <div class="flex items-center justify-between mb-4 md:mb-6 text-paper">
+            <span class="label">Research · Academic</span>
+            <span class="label tabular">07 / 08</span>
+          </div>
+          <h3 class="font-display font-black text-paper text-3xl md:text-5xl lg:text-6xl leading-none max-w-3xl">
+            Headless Low-Code<br />
+            <span class="italic font-normal">Web Application Builder</span>
+          </h3>
+          <div class="flex flex-wrap items-center gap-6 mt-6 md:mt-8 text-paper">
+            <span class="label">Architecture</span>
+            <span class="label">·</span>
+            <span class="label">Abstraction Layers</span>
+            <span class="label">·</span>
+            <span class="label tabular">2024</span>
           </div>
         </div>
       </div>
-    </section>
-    <!-- akhir hero -->
-
-    <!-- awal about -->
-    <section id="about" class="pt-36 pb-32 mt-10 dark:bg-dark">
-      <div class="container">
-        <div class="flex flex-wrap">
-          <div class="w-full px-4 mb-10 lg:w-1/2">
-            <h4 class="font-bold text-primary uppercase text-lg mb-3 madimi">Tentang Saya</h4>
-            <h1 class="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl dark:text-white">Ayoo, Belajar Programing bareng!!</h1>
-            <p class="text-secondary font-medium text-base max-w-xl lg:text-lg">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur nihil dignissimos incidunt odio a culpa autem.</p>
-          </div>
-          <div class="w-full px-4 lg:w-1/2">
-            <h4 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10 dark:text-white">Mari Berteman</h4>
-            <p class="font-medium text-base text-secondary mb-6 lg:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima velit provident voluptatibus eius consequatur fuga, ut labore quidem?</p>
-            <div class="flex items-center dark:text-white">
-              <!-- youtube -->
-              <a href="https://www.youtube.com/@Kak.Reyhan" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white">
-                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <title>YouTube</title>
-                  <path
-                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
-                  />
-                </svg>
-              </a>
-              <!-- instagram -->
-              <a href="https://www.instagram.com/jabiralawfaa/" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white">
-                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <title>Instagram</title>
-                  <path
-                    d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"
-                  />
-                </svg>
-              </a>
-              <!-- gmail -->
-              <a
-                href="https://mail.google.com/mail/u/0/#inbox?compose=XBcJlDMtztflpDPZCQmlpdzmRfqSgBXbqRHnBfLFfNLZmXbcJLHNlNNHqdlVfjHmKnBlFpsPbzssLjcb"
-                target="_blank"
-                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white"
-              >
-                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <title>Gmail</title>
-                  <path
-                    d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"
-                  />
-                </svg>
-              </a>
-            </div>
-          </div>
+      <div class="grid grid-cols-12 gap-4 mt-6">
+        <div class="col-span-12 md:col-span-6 md:col-start-1">
+          <p class="text-stone-dark leading-relaxed">
+            An academic research project investigating how headless low-code
+            architectures can be structured to support composable, decoupled
+            web application builders. See the Research section for full context.
+          </p>
+        </div>
+        <div class="col-span-12 md:col-span-3 md:col-start-10 self-end md:text-right">
+          <a href="#research" class="label link-underline inline-block">Read the research →</a>
         </div>
       </div>
-    </section>
-    <!-- akhir about -->
+    </article>
 
-    <!-- portfolio -->
-    <section id="portfolio" class="pt-36 pb16 bg-slate-100 dark:bg-slate-800">
-      <div class="container">
-        <div class="w-full px-4">
-          <div class="mx-auto text-center mb-16">
-            <h4 class="font-semibold uppercase text-primary text-lg mb-2 madimi">Portfolio</h4>
-            <h2 class="font-bold text-3xl text-dark mb-4 sm:text-4xl lg:text-5xl dark:text-white">Project Terbaru</h2>
-            <p class="font-medium text-md text-secondary md:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate officiis et sint, odio optio eligendi! Lorem ipsum dolor sit amet.</p>
-          </div>
+    <!-- Closing row of the work section: small visual project -->
+    <article class="grid grid-cols-12 gap-y-8 md:gap-x-4 mt-20 md:mt-28 pt-12 border-t border-ink">
+      <div class="col-span-12 md:col-span-4">
+        <div class="flex items-center justify-between border-b border-ink pb-3 mb-6">
+          <span class="label">Experiment · Personal</span>
+          <span class="label tabular">08 / 08</span>
         </div>
-        <div class="w-full px-4 flex flex-wrap xl:w-10/12 xl:mx-auto">
-          <div class="mb-12 p-4 md:w-1/2">
-            <div class="rounded-md shadow-md overflow-hidden">
-              <img src="img/project/landing page tailwind.PNG" alt="My Landing Page" class="w-full" />
-            </div>
-            <h3 class="font-semibold text-xl text-dark dark:text-white">Landing Page TailwindCSS oleh Jabiralawfa</h3>
-            <p class="font-medium text-base text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus cupiditate nesciunt dolore!</p>
-          </div>
-          <div class="mb-12 p-4 md:w-1/2">
-            <div class="rounded-md shadow-md overflow-hidden">
-              <img src="img/project/portfolio bootstrap.PNG" alt="Portfolio Bootstrap" class="w-full" />
-            </div>
-            <h3 class="font-semibold text-xl text-dark dark:text-white">Portfolio Bootstrap oleh Jabiralawfa</h3>
-            <p class="font-medium text-base text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus cupiditate nesciunt dolore!</p>
-          </div>
-          <div class="mb-12 p-4 md:w-1/2">
-            <div class="rounded-md shadow-md overflow-hidden">
-              <img src="img/project/web hotspot imudnet.PNG" alt="Web Login Hotspot Imudnet" class="w-full" />
-            </div>
-            <h3 class="font-semibold text-xl text-dark dark:text-white">Web Login Hotspot Imudnet oleh Jabiralawfa</h3>
-            <p class="font-medium text-base text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus cupiditate nesciunt dolore!</p>
-          </div>
-          <div class="mb-12 p-4 md:w-1/2">
-            <div class="rounded-md shadow-md overflow-hidden">
-              <img src="img/project/web hotspot mikrotik.PNG" alt="Web Login Hotspot Mikrotik" class="w-full" />
-            </div>
-            <h3 class="font-semibold text-xl text-dark dark:text-white">Web Login Hotspot Mikrotik oleh Jabiralawfa</h3>
-            <p class="font-medium text-base text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus cupiditate nesciunt dolore!</p>
-          </div>
+        <div class="label text-stone-dark mb-2">Creative Coding</div>
+        <h3 class="font-display font-black text-large mb-4">Generative Posters</h3>
+        <p class="text-stone-dark leading-relaxed">
+          A growing archive of poster compositions generated from typographic
+          rules and modular grid systems. A space to test ideas that often
+          become client work.
+        </p>
+      </div>
+      <div class="col-span-12 md:col-span-7 md:col-start-6 grid grid-cols-2 gap-4">
+        <div class="image-frame aspect-portrait border border-ink">
+          <img src="https://picsum.photos/seed/poster-one/800/1067" alt="Generative poster composition one" class="w-full h-full object-cover" />
+        </div>
+        <div class="image-frame aspect-portrait border border-ink">
+          <img src="https://picsum.photos/seed/poster-two/800/1067" alt="Generative poster composition two" class="w-full h-full object-cover" />
         </div>
       </div>
-    </section>
-    <!-- akhir portfolio -->
+    </article>
 
-    <!-- clients -->
-    <section id="clients" class="pt-36 pb-16 bg-dark dark:bg-slate-300">
-      <div class="container">
-        <div class="w-full px-4">
-          <div class="mx-auto text-center mb-16">
-            <h4 class="font-semibold uppercase text-primary text-lg mb-2 madimi">Thanks For</h4>
-            <h2 class="font-bold text-3xl text-white mb-4 sm:text-4xl lg:text-5xl dark:text-dark">Terima Kasih dari saya untuk mereka</h2>
-            <p class="font-medium text-md text-secondary md:text-lg">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque quam facere suscipit!</p>
-          </div>
+  </div>
+</section>
+
+<!-- ============== 04 — DEVELOPMENT ============== -->
+<section id="development" class="px-6 md:px-10 py-24 md:py-32 border-t border-ink bg-stone-light">
+  <div class="max-w-editorial mx-auto w-full">
+
+    <div class="flex items-end justify-between gap-6 pb-6 md:pb-8 border-b border-ink mb-12 md:mb-20">
+      <div>
+        <div class="label mb-3">04 — Development</div>
+        <h2 class="font-display font-black text-headline">The Stack</h2>
+      </div>
+      <div class="label text-stone-dark text-right hidden md:block">
+        Technologies<br />in use
+      </div>
+    </div>
+
+    <div class="grid grid-cols-12 gap-y-12 md:gap-y-0 gap-x-4 mb-12 md:mb-16">
+      <div class="col-span-12 md:col-span-7">
+        <p class="editorial-lead">
+          The list below is not a logo grid. It is an index of the technologies
+          I currently use to build, ship, and maintain software — grouped by
+          role within the stack.
+        </p>
+      </div>
+      <div class="col-span-12 md:col-span-3 md:col-start-10 self-end">
+        <div class="label text-stone-dark">Indexed by<br />category &amp; layer</div>
+      </div>
+    </div>
+
+    <!-- Tech index -->
+    <div class="grid grid-cols-12 gap-x-4 gap-y-12">
+
+      <!-- Frontend -->
+      <div class="col-span-12 md:col-span-6 md:border-r md:border-ink md:pr-8">
+        <div class="flex items-baseline justify-between border-b border-ink pb-3 mb-6">
+          <span class="label-lg">A. Frontend</span>
+          <span class="label tabular text-stone-dark">06 items</span>
         </div>
+        <ul class="space-y-3">
+          <li class="flex items-baseline justify-between gap-4">
+            <span class="font-display text-xl md:text-2xl">HTML</span>
+            <span class="label text-stone-dark">Markup</span>
+          </li>
+          <li class="flex items-baseline justify-between gap-4">
+            <span class="font-display text-xl md:text-2xl">CSS</span>
+            <span class="label text-stone-dark">Styling</span>
+          </li>
+          <li class="flex items-baseline justify-between gap-4">
+            <span class="font-display text-xl md:text-2xl">JavaScript</span>
+            <span class="label text-stone-dark">Language</span>
+          </li>
+          <li class="flex items-baseline justify-between gap-4">
+            <span class="font-display text-xl md:text-2xl">React</span>
+            <span class="label text-stone-dark">UI Library</span>
+          </li>
+          <li class="flex items-baseline justify-between gap-4">
+            <span class="font-display text-xl md:text-2xl">Vite</span>
+            <span class="label text-stone-dark">Build Tool</span>
+          </li>
+          <li class="flex items-baseline justify-between gap-4">
+            <span class="font-display text-xl md:text-2xl">Bootstrap</span>
+            <span class="label text-stone-dark">Framework</span>
+          </li>
+        </ul>
+      </div>
 
-        <div class="w-full px-4">
-          <div class="flex flex-wrap text-center justify-center">
-            <a href="https://tailwindcss.com/" class="max-w-[150px] mx-4 py-4 grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100 duration-500 lg:mx-6 xl:mx-8">
-              <img src="img/logo/Tailwind_CSS_logo.svg" alt="" />
-            </a>
-            <a href="https://mikrotik.com/" class="max-w-[150px] mx-4 py-4 grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100 duration-500 lg:mx-6 xl:mx-8">
-              <img src="img/logo/MikroTik_Logo.svg" alt="" />
-            </a>
-            <a href="https://www.coreldraw.com/en/" class="max-w-[150px] mx-4 py-4 grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100 duration-500 lg:mx-6 xl:mx-8">
-              <img src="img/logo/coreldraw-icon.svg" alt="" />
-            </a>
-            <a href="https://getbootstrap.com/" class="max-w-[150px] mx-4 py-4 grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100 duration-500 lg:mx-6 xl:mx-8">
-              <img src="img/logo/Bootstrap_logo.svg" alt="" />
-            </a>
-          </div>
+      <!-- Backend -->
+      <div class="col-span-12 md:col-span-6 md:pl-8">
+        <div class="flex items-baseline justify-between border-b border-ink pb-3 mb-6">
+          <span class="label-lg">B. Backend</span>
+          <span class="label tabular text-stone-dark">02 items</span>
+        </div>
+        <ul class="space-y-3">
+          <li class="flex items-baseline justify-between gap-4">
+            <span class="font-display text-xl md:text-2xl">PHP</span>
+            <span class="label text-stone-dark">Language</span>
+          </li>
+          <li class="flex items-baseline justify-between gap-4">
+            <span class="font-display text-xl md:text-2xl">Laravel</span>
+            <span class="label text-stone-dark">Framework</span>
+          </li>
+        </ul>
+
+        <div class="flex items-baseline justify-between border-b border-ink pb-3 mb-6 mt-12">
+          <span class="label-lg">C. Database &amp; Services</span>
+          <span class="label tabular text-stone-dark">02 items</span>
+        </div>
+        <ul class="space-y-3">
+          <li class="flex items-baseline justify-between gap-4">
+            <span class="font-display text-xl md:text-2xl">Firebase</span>
+            <span class="label text-stone-dark">Platform</span>
+          </li>
+          <li class="flex items-baseline justify-between gap-4">
+            <span class="font-display text-xl md:text-2xl">Firestore</span>
+            <span class="label text-stone-dark">Database</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Tools -->
+      <div class="col-span-12 md:col-span-12 md:border-t md:border-ink md:pt-12 mt-4 md:mt-12">
+        <div class="flex items-baseline justify-between border-b border-ink pb-3 mb-6">
+          <span class="label-lg">D. Tools &amp; Workflow</span>
+          <span class="label tabular text-stone-dark">04 items</span>
+        </div>
+        <ul class="grid grid-cols-2 md:grid-cols-4 gap-y-6 gap-x-4">
+          <li class="flex flex-col gap-1">
+            <span class="font-display text-xl md:text-2xl">Git</span>
+            <span class="label text-stone-dark">Version Control</span>
+          </li>
+          <li class="flex flex-col gap-1">
+            <span class="font-display text-xl md:text-2xl">GitHub</span>
+            <span class="label text-stone-dark">Collaboration</span>
+          </li>
+          <li class="flex flex-col gap-1">
+            <span class="font-display text-xl md:text-2xl">Figma</span>
+            <span class="label text-stone-dark">Design</span>
+          </li>
+          <li class="flex flex-col gap-1">
+            <span class="font-display text-xl md:text-2xl">VS Code</span>
+            <span class="label text-stone-dark">Editor</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Marquee -->
+    <div class="mt-16 md:mt-24 border-t border-b border-ink py-4 overflow-hidden marquee-container">
+      <div class="marquee-track flex gap-12 whitespace-nowrap will-change-transform">
+        <!-- Repeat set twice for seamless loop -->
+        <span class="font-display text-2xl md:text-3xl">React</span>
+        <span class="font-display text-2xl md:text-3xl text-stone-dark">·</span>
+        <span class="font-display text-2xl md:text-3xl italic">Laravel</span>
+        <span class="font-display text-2xl md:text-3xl text-stone-dark">·</span>
+        <span class="font-display text-2xl md:text-3xl">JavaScript</span>
+        <span class="font-display text-2xl md:text-3xl text-stone-dark">·</span>
+        <span class="font-display text-2xl md:text-3xl italic">PHP</span>
+        <span class="font-display text-2xl md:text-3xl text-stone-dark">·</span>
+        <span class="font-display text-2xl md:text-3xl">Vite</span>
+        <span class="font-display text-2xl md:text-3xl text-stone-dark">·</span>
+        <span class="font-display text-2xl md:text-3xl italic">Firebase</span>
+        <span class="font-display text-2xl md:text-3xl text-stone-dark">·</span>
+        <span class="font-display text-2xl md:text-3xl">Figma</span>
+        <span class="font-display text-2xl md:text-3xl text-stone-dark">·</span>
+        <!-- repeat -->
+        <span class="font-display text-2xl md:text-3xl">React</span>
+        <span class="font-display text-2xl md:text-3xl text-stone-dark">·</span>
+        <span class="font-display text-2xl md:text-3xl italic">Laravel</span>
+        <span class="font-display text-2xl md:text-3xl text-stone-dark">·</span>
+        <span class="font-display text-2xl md:text-3xl">JavaScript</span>
+        <span class="font-display text-2xl md:text-3xl text-stone-dark">·</span>
+        <span class="font-display text-2xl md:text-3xl italic">PHP</span>
+        <span class="font-display text-2xl md:text-3xl text-stone-dark">·</span>
+        <span class="font-display text-2xl md:text-3xl">Vite</span>
+        <span class="font-display text-2xl md:text-3xl text-stone-dark">·</span>
+        <span class="font-display text-2xl md:text-3xl italic">Firebase</span>
+        <span class="font-display text-2xl md:text-3xl text-stone-dark">·</span>
+        <span class="font-display text-2xl md:text-3xl">Figma</span>
+        <span class="font-display text-2xl md:text-3xl text-stone-dark">·</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============== 05 — DESIGN ============== -->
+<section id="design" class="px-6 md:px-10 py-24 md:py-32 border-t border-ink">
+  <div class="max-w-editorial mx-auto w-full">
+
+    <div class="flex items-end justify-between gap-6 pb-6 md:pb-8 border-b border-ink mb-12 md:mb-20">
+      <div>
+        <div class="label mb-3">05 — Design</div>
+        <h2 class="font-display font-black text-headline">Visual Work</h2>
+      </div>
+      <div class="label text-stone-dark text-right hidden md:block">
+        Selected<br />visual projects
+      </div>
+    </div>
+
+    <!-- Intro -->
+    <div class="grid grid-cols-12 gap-4 mb-12 md:mb-20">
+      <div class="col-span-12 md:col-span-7">
+        <h3 class="font-display font-black text-display">
+          <span class="block">Design is not</span>
+          <span class="block italic font-normal text-stone-dark">a secondary</span>
+          <span class="block">practice<span class="text-stone-dark">.</span></span>
+        </h3>
+      </div>
+      <div class="col-span-12 md:col-span-4 md:col-start-9 self-end">
+        <p class="text-stone-dark leading-relaxed">
+          The visual work below is selected from album covers, posters,
+          social media design, and personal artwork. It is presented
+          without framings or extraneous UI — the images are the work.
+        </p>
+      </div>
+    </div>
+
+    <!-- Gallery: editorial asymmetric layout -->
+    <div class="grid grid-cols-12 gap-y-8 md:gap-y-12 gap-x-4 md:gap-x-6">
+
+      <!-- Row 1: large + meta -->
+      <div class="col-span-12 md:col-span-8">
+        <div class="image-frame aspect-wide border border-ink">
+          <img src="https://picsum.photos/seed/design-large-one/1600/1000" alt="Large editorial design composition" class="w-full h-full object-cover" />
         </div>
       </div>
-    </section>
-    <!-- akhir clients -->
+      <div class="col-span-12 md:col-span-3 md:col-start-10 flex flex-col justify-end">
+        <div class="label text-stone-dark mb-2">Series · 01</div>
+        <h4 class="font-display text-xl md:text-2xl mb-3">Cover Studies</h4>
+        <p class="text-sm text-stone-dark leading-relaxed mb-4">
+          A study in typographic covers exploring weight, contrast, and the
+          threshold where lettering becomes image.
+        </p>
+        <div class="label text-stone-dark">2024 · Graphic Design</div>
+      </div>
 
-    <!-- blog -->
-    <section id="blog" class="pt-36 pb-32 bg-slate-100 dark:bg-dark">
-      <div class="container">
-        <div class="w-full px-4">
-          <div class="mx-auto text-center mb-16">
-            <h4 class="font-semibold uppercase text-primary text-lg mb-2 madimi">Blog</h4>
-            <h2 class="font-bold text-3xl text-dark mb-4 sm:text-4xl lg:text-5xl dark:text-white">Lihat Blog yang bisa membantu anda</h2>
-            <p class="font-medium text-md text-secondary md:text-lg">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit dolorem ex pariatur asperiores quis.</p>
-          </div>
+      <!-- Row 2: four square album covers -->
+      <div class="col-span-6 md:col-span-3">
+        <div class="image-frame aspect-square border border-ink">
+          <img src="https://picsum.photos/seed/album-cover-a/800/800" alt="Album cover design A" class="w-full h-full object-cover" />
         </div>
-
-        <div class="flex flex-wrap">
-          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden dark:bg-slate-800 mb-10">
-              <img src="img/blog/cara ngoding.jpg" alt="gambar ngoding" class="w-full" />
-              <div class="py-8 px-6">
-                <h3><a href="#" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate dark:text-white">Cara ngoding dengan framework css seperti TailwindCSS</a></h3>
-                <p class="font-medium text-base text-secondary mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. At!</p>
-                <a href="#" class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-xl hover:opacity-80">Baca selengkapnya>></a>
-              </div>
-            </div>
-          </div>
-          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden dark:bg-slate-800 mb-10">
-              <img src="img/blog/bagi koneksi.jpg" alt="gambar ngoding" class="w-full" />
-              <div class="py-8 px-6">
-                <h3><a href="#" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate dark:text-white">Cara menaikan level jaringan internet di lingkungan anda</a></h3>
-                <p class="font-medium text-base text-secondary mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, eligendi.</p>
-                <a href="#" class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-xl hover:opacity-80">Baca selengkapnya>></a>
-              </div>
-            </div>
-          </div>
-          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden dark:bg-slate-800 mb-10">
-              <img src="img/blog/edit website.jpg" alt="gambar ngoding" class="w-full" />
-              <div class="py-8 px-6">
-                <h3><a href="#" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate dark:text-white">Cara mengunakan framework seperti bootstrap dan lainnya</a></h3>
-                <p class="font-medium text-base text-secondary mb-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, explicabo ipsum.</p>
-                <a href="#" class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-xl hover:opacity-80">Baca selengkapnya>></a>
-              </div>
-            </div>
-          </div>
-          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden dark:bg-slate-800 mb-10">
-              <img src="img/blog/server.jpg" alt="gambar ngoding" class="w-full" />
-              <div class="py-8 px-6">
-                <h3><a href="#" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate dark:text-white">Cara mengembangkan cloud server anda agar bisa mempermudah kehidupan digital anda</a></h3>
-                <p class="font-medium text-base text-secondary mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, beatae!</p>
-                <a href="#" class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-xl hover:opacity-80">Baca selengkapnya>></a>
-              </div>
-            </div>
-          </div>
+        <div class="flex items-baseline justify-between mt-3">
+          <span class="label">Cover · A</span>
+          <span class="label tabular text-stone-dark">001</span>
         </div>
       </div>
-    </section>
-    <!-- akhir blog -->
-
-    <!-- contact -->
-    <section id="kontak" class="pt-36 pb-32 dark:bg-slate-800">
-      <div class="container">
-        <div class="w-full px-4">
-          <div class="mx-auto text-center mb-16">
-            <h4 class="font-semibold uppercase text-primary text-lg mb-2 madimi">Contact</h4>
-            <h2 class="font-bold text-3xl text-dark mb-4 sm:text-4xl lg:text-5xl dark:text-white">Beri saya pesan untuk kesan dan sarannya!</h2>
-            <p class="font-medium text-md text-secondary md:text-lg">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, eum?</p>
-          </div>
+      <div class="col-span-6 md:col-span-3">
+        <div class="image-frame aspect-square border border-ink">
+          <img src="https://picsum.photos/seed/album-cover-b/800/800" alt="Album cover design B" class="w-full h-full object-cover" />
         </div>
-
-        <form>
-          <div class="w-full lg:w-2/3 lg:mx-auto">
-            <div class="w-full px-4 mb-8">
-              <label for="name" class="text-base font-bold text-primary madimi text-xl lg:text-2xl">Nama</label>
-              <input type="text" id="name" class="w-full bg-slate-200 text-primary p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary lg:text-xl madimi" />
-            </div>
-            <div class="w-full px-4 mb-8">
-              <label for="email" class="text-base font-bold text-primary madimi text-xl lg:text-2xl">Email</label>
-              <input type="email" id="email" class="w-full bg-slate-200 text-primary p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary lg:text-xl madimi" />
-            </div>
-            <div class="w-full px-4 mb-8">
-              <label for="message" class="text-base font-bold text-primary madimi text-xl lg:text-2xl">Pesan</label>
-              <textarea type="email" id="email" class="w-full bg-slate-200 text-primary p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary lg:text-xl madimi h-30"></textarea>
-            </div>
-            <div class="w-full px-4">
-              <button class="text-base madimi font-semibold text-white bg-primary py-3 px-8 rounded-full w-full hover:opacity-80 hover:shadow-lg transition duration-500">Kirim Pesan</button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </section>
-    <!-- akhir contact -->
-
-    <!-- footer -->
-    <footer class="pt-24 pb-12 bg-dark">
-      <div class="container">
-        <div class="flex flex-wrap">
-          <div class="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/3">
-            <h2 class="font-bold madimi text-4xl text-white mb-5">Al-awfa Design</h2>
-            <h3 class="font-bold madimi text-2xl mb-2">Hubungi Saya</h3>
-            <p>Jabiralawfa@gmail.com</p>
-            <p>Jl. Diponegoro no.10 Petung</p>
-            <p>Banyuwangi</p>
-          </div>
-          <div class="w-full px-4 mb-12 md:w-1/3">
-            <h3 class="font-semibold text-xl text-white mb-5">Kategori Tulisan</h3>
-            <ul class="text-slate-300">
-              <li>
-                <a href="#" class="text-base inline-block hover:text-primary mb-3">Programing</a>
-              </li>
-              <li>
-                <a href="#" class="text-base inline-block hover:text-primary mb-3">Server</a>
-              </li>
-              <li>
-                <a href="#" class="text-base inline-block hover:text-primary mb-3">Mikrotik</a>
-              </li>
-            </ul>
-          </div>
-          <div class="w-full px-4 mb-12 md:w-1/3">
-            <h3 class="font-semibold text-xl text-white mb-5">Tautan</h3>
-            <ul class="text-slate-300">
-              <li>
-                <a href="#home" class="text-base inline-block hover:text-primary mb-3">Beranda</a>
-              </li>
-              <li>
-                <a href="#about" class="text-base inline-block hover:text-primary mb-3">Tentang Saya</a>
-              </li>
-              <li>
-                <a href="#portfolio" class="text-base inline-block hover:text-primary mb-3">Portfolio</a>
-              </li>
-              <li>
-                <a href="#clients" class="text-base inline-block hover:text-primary mb-3">Thanks For</a>
-              </li>
-              <li>
-                <a href="#blog" class="text-base inline-block hover:text-primary mb-3">Blog</a>
-              </li>
-              <li>
-                <a href="#kontak" class="text-base inline-block hover:text-primary mb-3">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="w-full pt-10 border-t border-slate-600">
-          <div class="flex items-center justify-center mb-5 text-white">
-            <!-- youtube -->
-            <a href="https://www.youtube.com/@Kak.Reyhan" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white">
-              <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <title>YouTube</title>
-                <path
-                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
-                />
-              </svg>
-            </a>
-            <!-- instagram -->
-            <a href="https://www.instagram.com/jabiralawfaa/" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white">
-              <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <title>Instagram</title>
-                <path
-                  d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"
-                />
-              </svg>
-            </a>
-            <!-- gmail -->
-            <a
-              href="https://mail.google.com/mail/u/0/#inbox?compose=XBcJlDMtztflpDPZCQmlpdzmRfqSgBXbqRHnBfLFfNLZmXbcJLHNlNNHqdlVfjHmKnBlFpsPbzssLjcb"
-              target="_blank"
-              class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white"
-            >
-              <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <title>Gmail</title>
-                <path
-                  d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"
-                />
-              </svg>
-            </a>
-          </div>
-          <div class="">
-            <p class="font-medium text-xs madimi text-slate-600 text-center">
-              Dibuat oleh <a href="https://www.instagram.com/jabiralawfaa/" class="font-bold text-primary" target="_blank">Rusydi Jabir Alawfa</a> menggunakan
-              <a href="https://tailwindcss.com/" target="_blank" class="font-bold text-sky-500">TailwindCSS</a>.
-            </p>
-          </div>
+        <div class="flex items-baseline justify-between mt-3">
+          <span class="label">Cover · B</span>
+          <span class="label tabular text-stone-dark">002</span>
         </div>
       </div>
-    </footer>
-    <!-- akhir footer -->
+      <div class="col-span-6 md:col-span-3">
+        <div class="image-frame aspect-square border border-ink">
+          <img src="https://picsum.photos/seed/album-cover-c/800/800" alt="Album cover design C" class="w-full h-full object-cover" />
+        </div>
+        <div class="flex items-baseline justify-between mt-3">
+          <span class="label">Cover · C</span>
+          <span class="label tabular text-stone-dark">003</span>
+        </div>
+      </div>
+      <div class="col-span-6 md:col-span-3">
+        <div class="image-frame aspect-square border border-ink">
+          <img src="https://picsum.photos/seed/album-cover-d/800/800" alt="Album cover design D" class="w-full h-full object-cover" />
+        </div>
+        <div class="flex items-baseline justify-between mt-3">
+          <span class="label">Cover · D</span>
+          <span class="label tabular text-stone-dark">004</span>
+        </div>
+      </div>
 
-    <!-- backtop button -->
-    <a href="#home" class="fixed z-[9999] bottom-4 right-4 p-4 h-14 w-14 bg-primary rounded-full text-white hidden transition duration-500" id="backtop"><img src="img/rocket.svg" alt="" /></a>
-    <!-- akhir backtop -->
+      <!-- Row 3: portrait + text + portrait -->
+      <div class="col-span-6 md:col-span-4">
+        <div class="image-frame aspect-portrait border border-ink">
+          <img src="https://picsum.photos/seed/poster-portrait-a/800/1067" alt="Portrait poster design A" class="w-full h-full object-cover" />
+        </div>
+        <div class="flex items-baseline justify-between mt-3">
+          <span class="label">Poster · 001</span>
+          <span class="label tabular text-stone-dark">2024</span>
+        </div>
+      </div>
+      <div class="col-span-12 md:col-span-4 flex flex-col justify-center px-2 md:px-4 py-4">
+        <div class="label text-stone-dark mb-3">Approach</div>
+        <h4 class="font-display text-xl md:text-2xl mb-3 leading-tight">Composition over decoration.</h4>
+        <p class="text-sm text-stone-dark leading-relaxed">
+          Each piece is approached as a structural problem before it is a
+          stylistic one. Hierarchy, rhythm, and negative space are decided
+          before any colour or texture enters.
+        </p>
+      </div>
+      <div class="col-span-6 md:col-span-4">
+        <div class="image-frame aspect-portrait border border-ink">
+          <img src="https://picsum.photos/seed/poster-portrait-b/800/1067" alt="Portrait poster design B" class="w-full h-full object-cover" />
+        </div>
+        <div class="flex items-baseline justify-between mt-3">
+          <span class="label">Poster · 002</span>
+          <span class="label tabular text-stone-dark">2024</span>
+        </div>
+      </div>
 
-    <script src="script.js"></script>
-  </body>
+      <!-- Row 4: full-bleed wide -->
+      <div class="col-span-12 md:col-span-12 mt-4">
+        <div class="image-frame aspect-cinema border border-ink">
+          <img src="https://picsum.photos/seed/design-banner/2400/1030" alt="Wide banner design composition" class="w-full h-full object-cover" />
+        </div>
+        <div class="flex items-baseline justify-between mt-3">
+          <span class="label">Series · 02 — Banner Study</span>
+          <span class="label tabular text-stone-dark">2024 · 005</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ============== 06 — CREATIVE LAB ============== -->
+<section id="lab" class="px-6 md:px-10 py-24 md:py-32 border-t border-ink bg-stone-light">
+  <div class="max-w-editorial mx-auto w-full">
+
+    <div class="flex items-end justify-between gap-6 pb-6 md:pb-8 border-b border-ink mb-12 md:mb-20">
+      <div>
+        <div class="label mb-3">06 — Creative Lab</div>
+        <h2 class="font-display font-black text-headline italic">The Lab</h2>
+      </div>
+      <div class="label text-stone-dark text-right hidden md:block">
+        Experiments<br />&amp; side work
+      </div>
+    </div>
+
+    <div class="grid grid-cols-12 gap-y-8 md:gap-y-0 gap-x-4 mb-16 md:mb-20">
+      <div class="col-span-12 md:col-span-8">
+        <h3 class="font-display font-black text-display">
+          <span class="block">Experiments</span>
+          <span class="block italic font-normal text-stone-dark">that don't fit</span>
+          <span class="block">elsewhere<span class="text-stone-dark">.</span></span>
+        </h3>
+      </div>
+      <div class="col-span-12 md:col-span-3 md:col-start-10 self-end">
+        <p class="text-stone-dark leading-relaxed">
+          A working directory of music, visual studies, and small coding
+          experiments. Things made for curiosity, not for outcome.
+        </p>
+      </div>
+    </div>
+
+    <!-- Lab grid -->
+    <div class="grid grid-cols-12 gap-y-12 md:gap-y-16 gap-x-4 md:gap-x-6">
+
+      <!-- Experiment 01 -->
+      <article class="col-span-12 md:col-span-6 md:border-r md:border-ink md:pr-6">
+        <div class="flex items-baseline justify-between border-b border-ink pb-3 mb-6">
+          <span class="label">Music · Suno AI</span>
+          <span class="label tabular text-stone-dark">E.01</span>
+        </div>
+        <h4 class="font-display font-bold text-2xl md:text-3xl mb-3">AI-Assisted Composition</h4>
+        <p class="text-sm text-stone-dark leading-relaxed mb-6">
+          A series of tracks produced with Suno AI, used as a sandbox for
+          thinking about authorship, structure, and the moment where a
+          tool becomes a collaborator.
+        </p>
+        <div class="aspect-wide image-frame border border-ink">
+          <img src="https://picsum.photos/seed/lab-suno/1200/750" alt="AI music composition waveform visual" class="w-full h-full object-cover" />
+        </div>
+      </article>
+
+      <!-- Experiment 02 -->
+      <article class="col-span-12 md:col-span-6 md:pl-6">
+        <div class="flex items-baseline justify-between border-b border-ink pb-3 mb-6">
+          <span class="label">Music · Orchestra</span>
+          <span class="label tabular text-stone-dark">E.02</span>
+        </div>
+        <h4 class="font-display font-bold text-2xl md:text-3xl mb-3">Celtic Orchestral Sketches</h4>
+        <p class="text-sm text-stone-dark leading-relaxed mb-6">
+          Sketches for orchestral pieces with Celtic influences. An ongoing
+          study of arrangement, motif development, and instrumental balance.
+        </p>
+        <div class="aspect-wide image-frame border border-ink">
+          <img src="https://picsum.photos/seed/lab-celtic/1200/750" alt="Orchestral celtic music composition visual" class="w-full h-full object-cover" />
+        </div>
+      </article>
+
+      <!-- Experiment 03 -->
+      <article class="col-span-12 md:col-span-4 md:border-r md:border-ink md:pr-6">
+        <div class="flex items-baseline justify-between border-b border-ink pb-3 mb-6">
+          <span class="label">Visual · Album</span>
+          <span class="label tabular text-stone-dark">E.03</span>
+        </div>
+        <h4 class="font-display font-bold text-xl md:text-2xl mb-3">Cover Experiments</h4>
+        <p class="text-sm text-stone-dark leading-relaxed mb-6">
+          Covers produced alongside the music — testing whether a single
+          image can carry the same weight as a track.
+        </p>
+        <div class="aspect-square image-frame border border-ink">
+          <img src="https://picsum.photos/seed/lab-cover/800/800" alt="Album cover experiment visual" class="w-full h-full object-cover" />
+        </div>
+      </article>
+
+      <!-- Experiment 04 -->
+      <article class="col-span-12 md:col-span-4 md:border-r md:border-ink md:pr-6 md:pl-6">
+        <div class="flex items-baseline justify-between border-b border-ink pb-3 mb-6">
+          <span class="label">Code · Creative</span>
+          <span class="label tabular text-stone-dark">E.04</span>
+        </div>
+        <h4 class="font-display font-bold text-xl md:text-2xl mb-3">Generative Systems</h4>
+        <p class="text-sm text-stone-dark leading-relaxed mb-6">
+          Small creative coding pieces exploring rule-based composition,
+          typography as data, and grids as instruments.
+        </p>
+        <div class="aspect-square image-frame border border-ink">
+          <img src="https://picsum.photos/seed/lab-generative/800/800" alt="Generative code composition visual" class="w-full h-full object-cover" />
+        </div>
+      </article>
+
+      <!-- Experiment 05 -->
+      <article class="col-span-12 md:col-span-4 md:pl-6">
+        <div class="flex items-baseline justify-between border-b border-ink pb-3 mb-6">
+          <span class="label">Interface · Exp.</span>
+          <span class="label tabular text-stone-dark">E.05</span>
+        </div>
+        <h4 class="font-display font-bold text-xl md:text-2xl mb-3">Experimental Interfaces</h4>
+        <p class="text-sm text-stone-dark leading-relaxed mb-6">
+          Interface prototypes built without a brief — testing how much
+          of an interface can be stripped before meaning collapses.
+        </p>
+        <div class="aspect-square image-frame border border-ink">
+          <img src="https://picsum.photos/seed/lab-interface/800/800" alt="Experimental interface prototype visual" class="w-full h-full object-cover" />
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ============== 07 — RESEARCH / THINKING ============== -->
+<section id="research" class="px-6 md:px-10 py-24 md:py-32 border-t border-ink">
+  <div class="max-w-editorial mx-auto w-full">
+
+    <div class="flex items-end justify-between gap-6 pb-6 md:pb-8 border-b border-ink mb-12 md:mb-20">
+      <div>
+        <div class="label mb-3">07 — Research</div>
+        <h2 class="font-display font-black text-headline">Thinking</h2>
+      </div>
+      <div class="label text-stone-dark text-right hidden md:block">
+        Academic<br />direction
+      </div>
+    </div>
+
+    <!-- Large research title -->
+    <div class="grid grid-cols-12 gap-y-8 md:gap-y-0 gap-x-4 mb-16 md:mb-24">
+      <div class="col-span-12 md:col-span-9">
+        <div class="label text-stone-dark mb-6">Research Topic</div>
+        <h3 class="font-display font-black text-display leading-[0.88]">
+          <span class="block">Headless</span>
+          <span class="block italic font-normal text-stone-dark">Low-Code</span>
+          <span class="block">Web Application</span>
+          <span class="block">Builder<span class="text-stone-dark">.</span></span>
+        </h3>
+      </div>
+      <div class="col-span-12 md:col-span-3 md:col-start-10 self-end">
+        <div class="label text-stone-dark mb-2">Status</div>
+        <div class="font-body text-base mb-4">In progress</div>
+        <div class="label text-stone-dark mb-2">Discipline</div>
+        <div class="font-body text-base">Software Architecture</div>
+      </div>
+    </div>
+
+    <!-- Research subsections -->
+    <div class="grid grid-cols-12 gap-y-12 md:gap-y-0 gap-x-4 border-t border-ink pt-12 md:pt-16">
+
+      <!-- Problem -->
+      <div class="col-span-12 md:col-span-6 md:border-r md:border-ink md:pr-8 md:pb-12">
+        <div class="flex items-baseline justify-between border-b border-ink pb-3 mb-6">
+          <span class="label-lg">A. Research Problem</span>
+          <span class="label tabular text-stone-dark">01</span>
+        </div>
+        <p class="text-stone-dark leading-relaxed">
+          Low-code platforms accelerate delivery but often produce systems
+          that are tightly coupled, opaque, and difficult to extend beyond
+          their original boundaries. The problem is not speed — it is the
+          lack of architectural clarity underneath.
+        </p>
+      </div>
+
+      <!-- Question -->
+      <div class="col-span-12 md:col-span-6 md:pl-8 md:pb-12">
+        <div class="flex items-baseline justify-between border-b border-ink pb-3 mb-6">
+          <span class="label-lg">B. Research Question</span>
+          <span class="label tabular text-stone-dark">02</span>
+        </div>
+        <p class="editorial-lead">
+          How can a <em class="font-display italic">headless low-code</em>
+          web application builder be architected so that its abstraction
+          layers remain composable, replaceable, and decoupled from any
+          specific presentation surface?
+        </p>
+      </div>
+
+      <!-- Direction -->
+      <div class="col-span-12 md:col-span-7 md:border-t md:border-r md:border-ink md:pr-8 md:pt-12">
+        <div class="flex items-baseline justify-between border-b border-ink pb-3 mb-6">
+          <span class="label-lg">C. Research Direction</span>
+          <span class="label tabular text-stone-dark">03</span>
+        </div>
+        <p class="text-stone-dark leading-relaxed mb-6">
+          The direction treats the builder as a set of independent layers —
+          modelling, schema, runtime, and rendering — each with explicit
+          contracts. The goal is not to build another platform, but to
+          describe an architecture that other builders could adopt.
+        </p>
+        <ul class="editorial-list space-y-2 text-sm">
+          <li>Layered abstraction model</li>
+          <li>Headless content &amp; schema separation</li>
+          <li>Replaceable rendering surfaces</li>
+          <li>Explicit runtime contracts</li>
+        </ul>
+      </div>
+
+      <!-- Current Exploration -->
+      <div class="col-span-12 md:col-span-4 md:col-start-9 md:border-t md:border-ink md:pt-12">
+        <div class="flex items-baseline justify-between border-b border-ink pb-3 mb-6">
+          <span class="label-lg">D. Current</span>
+          <span class="label tabular text-stone-dark">04</span>
+        </div>
+        <div class="label text-stone-dark mb-2">Phase</div>
+        <p class="font-body mb-6">Architecture mapping &amp; literature review</p>
+        <div class="label text-stone-dark mb-2">Next</div>
+        <p class="font-body mb-6">Reference implementation prototype</p>
+        <div class="label text-stone-dark mb-2">Outcome</div>
+        <p class="font-body text-stone-dark text-sm">
+          No results yet. This section will be updated as the research
+          progresses.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============== 08 — EXPERIENCE & LEARNING ============== -->
+<section id="experience" class="px-6 md:px-10 py-24 md:py-32 border-t border-ink">
+  <div class="max-w-editorial mx-auto w-full">
+
+    <div class="flex items-end justify-between gap-6 pb-6 md:pb-8 border-b border-ink mb-12 md:mb-20">
+      <div>
+        <div class="label mb-3">08 — Experience &amp; Learning</div>
+        <h2 class="font-display font-black text-headline">Trajectory</h2>
+      </div>
+      <div class="label text-stone-dark text-right hidden md:block">
+        A record of<br />progression
+      </div>
+    </div>
+
+    <div class="grid grid-cols-12 gap-y-8 md:gap-y-0 gap-x-4 mb-12 md:mb-20">
+      <div class="col-span-12 md:col-span-8">
+        <h3 class="font-display font-black text-display">
+          <span class="block">Progression</span>
+          <span class="block italic font-normal text-stone-dark">over</span>
+          <span class="block">promotion<span class="text-stone-dark">.</span></span>
+        </h3>
+      </div>
+      <div class="col-span-12 md:col-span-3 md:col-start-10 self-end">
+        <p class="text-stone-dark leading-relaxed">
+          A non-exhaustive index of where the work has come from and where
+          it is currently heading. Emphasis on direction rather than
+          accomplishment.
+        </p>
+      </div>
+    </div>
+
+    <!-- Timeline -->
+    <div class="border-t border-ink">
+
+      <!-- Entry 01 -->
+      <div class="grid grid-cols-12 gap-4 py-8 border-b border-ink">
+        <div class="col-span-3 md:col-span-2">
+          <div class="font-display text-2xl md:text-3xl tabular">2024</div>
+          <div class="label text-stone-dark mt-1">— Current</div>
+        </div>
+        <div class="col-span-1 md:col-span-1 flex justify-center">
+          <div class="w-px bg-ink h-full"></div>
+        </div>
+        <div class="col-span-8 md:col-span-9">
+          <div class="label text-stone-dark mb-2">Academic Research</div>
+          <h4 class="font-display font-bold text-xl md:text-2xl mb-2">Headless Low-Code Web Application Builder</h4>
+          <p class="text-stone-dark text-sm leading-relaxed max-w-2xl">
+            Investigating abstraction layers and headless architecture for
+            low-code web application builders. Architecture mapping and
+            literature review phase.
+          </p>
+        </div>
+      </div>
+
+      <!-- Entry 02 -->
+      <div class="grid grid-cols-12 gap-4 py-8 border-b border-ink">
+        <div class="col-span-3 md:col-span-2">
+          <div class="font-display text-2xl md:text-3xl tabular">2024</div>
+          <div class="label text-stone-dark mt-1">— Current</div>
+        </div>
+        <div class="col-span-1 md:col-span-1 flex justify-center">
+          <div class="w-px bg-ink h-full"></div>
+        </div>
+        <div class="col-span-8 md:col-span-9">
+          <div class="label text-stone-dark mb-2">Frontend Development</div>
+          <h4 class="font-display font-bold text-xl md:text-2xl mb-2">React &amp; Modern Web Interfaces</h4>
+          <p class="text-stone-dark text-sm leading-relaxed max-w-2xl">
+            Building web applications and interfaces with React and Vite.
+            Focused on accessible UI implementation and design-to-code
+            fidelity.
+          </p>
+        </div>
+      </div>
+
+      <!-- Entry 03 -->
+      <div class="grid grid-cols-12 gap-4 py-8 border-b border-ink">
+        <div class="col-span-3 md:col-span-2">
+          <div class="font-display text-2xl md:text-3xl tabular">2023</div>
+        </div>
+        <div class="col-span-1 md:col-span-1 flex justify-center">
+          <div class="w-px bg-ink h-full"></div>
+        </div>
+        <div class="col-span-8 md:col-span-9">
+          <div class="label text-stone-dark mb-2">Web Application Development</div>
+          <h4 class="font-display font-bold text-xl md:text-2xl mb-2">Laravel &amp; PHP</h4>
+          <p class="text-stone-dark text-sm leading-relaxed max-w-2xl">
+            Building full-stack web applications with Laravel and PHP.
+            Practical experience with routing, Eloquent, authentication,
+            and structured backend implementation.
+          </p>
+        </div>
+      </div>
+
+      <!-- Entry 04 -->
+      <div class="grid grid-cols-12 gap-4 py-8 border-b border-ink">
+        <div class="col-span-3 md:col-span-2">
+          <div class="font-display text-2xl md:text-3xl tabular">2023</div>
+        </div>
+        <div class="col-span-1 md:col-span-1 flex justify-center">
+          <div class="w-px bg-ink h-full"></div>
+        </div>
+        <div class="col-span-8 md:col-span-9">
+          <div class="label text-stone-dark mb-2">Graphic Design Practice</div>
+          <h4 class="font-display font-bold text-xl md:text-2xl mb-2">Visual Identity &amp; Artwork</h4>
+          <p class="text-stone-dark text-sm leading-relaxed max-w-2xl">
+            Ongoing graphic design practice — album covers, posters,
+            social media design. Building visual literacy alongside
+            development work.
+          </p>
+        </div>
+      </div>
+
+      <!-- Entry 05 -->
+      <div class="grid grid-cols-12 gap-4 py-8 border-b border-ink">
+        <div class="col-span-3 md:col-span-2">
+          <div class="font-display text-2xl md:text-3xl tabular">2022</div>
+        </div>
+        <div class="col-span-1 md:col-span-1 flex justify-center">
+          <div class="w-px bg-ink h-full"></div>
+        </div>
+        <div class="col-span-8 md:col-span-9">
+          <div class="label text-stone-dark mb-2">Foundations</div>
+          <h4 class="font-display font-bold text-xl md:text-2xl mb-2">Programming &amp; Web Fundamentals</h4>
+          <p class="text-stone-dark text-sm leading-relaxed max-w-2xl">
+            Building foundational understanding of web technologies,
+            programming patterns, and the relationship between front-end
+            and back-end systems.
+          </p>
+        </div>
+      </div>
+
+      <!-- Entry 06 placeholder -->
+      <div class="grid grid-cols-12 gap-4 py-8">
+        <div class="col-span-3 md:col-span-2">
+          <div class="font-display text-2xl md:text-3xl tabular text-stone-dark">—</div>
+          <div class="label text-stone-dark mt-1">To be added</div>
+        </div>
+        <div class="col-span-1 md:col-span-1 flex justify-center">
+          <div class="w-px bg-stone-mid h-full"></div>
+        </div>
+        <div class="col-span-8 md:col-span-9">
+          <div class="label text-stone-dark mb-2">Additional entries</div>
+          <h4 class="font-display font-bold text-xl md:text-2xl mb-2 text-stone-dark">Internship, organisational &amp; certification entries</h4>
+          <p class="text-stone-dark text-sm leading-relaxed max-w-2xl">
+            Placeholder for additional entries as they become available.
+            Structure is intentionally left open for future population.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ============== 09 — TOOLKIT / CAPABILITIES ============== -->
+<section id="toolkit" class="px-6 md:px-10 py-24 md:py-32 border-t border-ink bg-stone-light">
+  <div class="max-w-editorial mx-auto w-full">
+
+    <div class="flex items-end justify-between gap-6 pb-6 md:pb-8 border-b border-ink mb-12 md:mb-20">
+      <div>
+        <div class="label mb-3">09 — Capabilities</div>
+        <h2 class="font-display font-black text-headline">Toolkit</h2>
+      </div>
+      <div class="label text-stone-dark text-right hidden md:block">
+        What I can<br />actually do
+      </div>
+    </div>
+
+    <div class="grid grid-cols-12 gap-y-8 md:gap-y-0 gap-x-4 mb-12 md:mb-16">
+      <div class="col-span-12 md:col-span-7">
+        <p class="editorial-lead">
+          A concise summary of what I can do — grouped by the kind of work
+          each capability tends to produce. Not exhaustive, not aspirational.
+        </p>
+      </div>
+      <div class="col-span-12 md:col-span-3 md:col-start-10 self-end">
+        <div class="label text-stone-dark">Three<br />directions</div>
+      </div>
+    </div>
+
+    <!-- Capability columns -->
+    <div class="grid grid-cols-12 gap-y-12 md:gap-y-0 gap-x-4 border-t border-ink pt-12">
+
+      <!-- BUILD -->
+      <div class="col-span-12 md:col-span-4 md:border-r md:border-ink md:pr-6">
+        <div class="flex items-baseline justify-between border-b border-ink pb-3 mb-6">
+          <span class="font-display text-3xl md:text-4xl font-black">Build</span>
+          <span class="label tabular text-stone-dark">A</span>
+        </div>
+        <ul class="space-y-4">
+          <li class="font-body text-lg md:text-xl border-b border-stone-mid pb-3">Web applications</li>
+          <li class="font-body text-lg md:text-xl border-b border-stone-mid pb-3">Frontend interfaces</li>
+          <li class="font-body text-lg md:text-xl border-b border-stone-mid pb-3">Digital products</li>
+          <li class="font-body text-lg md:text-xl border-b border-stone-mid pb-3">Developer tools</li>
+          <li class="font-body text-lg md:text-xl">UI implementation</li>
+        </ul>
+      </div>
+
+      <!-- DESIGN -->
+      <div class="col-span-12 md:col-span-4 md:border-r md:border-ink md:pr-6 md:pl-6">
+        <div class="flex items-baseline justify-between border-b border-ink pb-3 mb-6">
+          <span class="font-display text-3xl md:text-4xl font-black italic">Design</span>
+          <span class="label tabular text-stone-dark">B</span>
+        </div>
+        <ul class="space-y-4">
+          <li class="font-body text-lg md:text-xl border-b border-stone-mid pb-3">Graphic design</li>
+          <li class="font-body text-lg md:text-xl border-b border-stone-mid pb-3">Visual identity</li>
+          <li class="font-body text-lg md:text-xl border-b border-stone-mid pb-3">Digital artwork</li>
+          <li class="font-body text-lg md:text-xl border-b border-stone-mid pb-3">Album artwork</li>
+          <li class="font-body text-lg md:text-xl">Posters &amp; covers</li>
+        </ul>
+      </div>
+
+      <!-- EXPLORE -->
+      <div class="col-span-12 md:col-span-4 md:pl-6">
+        <div class="flex items-baseline justify-between border-b border-ink pb-3 mb-6">
+          <span class="font-display text-3xl md:text-4xl font-black">Explore</span>
+          <span class="label tabular text-stone-dark">C</span>
+        </div>
+        <ul class="space-y-4">
+          <li class="font-body text-lg md:text-xl border-b border-stone-mid pb-3">Creative technology</li>
+          <li class="font-body text-lg md:text-xl border-b border-stone-mid pb-3">Experimental interfaces</li>
+          <li class="font-body text-lg md:text-xl border-b border-stone-mid pb-3">Research</li>
+          <li class="font-body text-lg md:text-xl border-b border-stone-mid pb-3">Music &amp; visual experimentation</li>
+          <li class="font-body text-lg md:text-xl">Creative coding</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ============== 10 — CONTACT (inverted) ============== -->
+<section id="contact" class="inverted px-6 md:px-10 py-24 md:py-40 border-t border-paper">
+  <div class="max-w-editorial mx-auto w-full">
+
+    <!-- Top metadata -->
+    <div class="flex items-start justify-between gap-6 pb-6 md:pb-8 border-b border-paper mb-12 md:mb-20">
+      <div class="flex flex-col gap-1">
+        <span class="label">10 — Contact</span>
+        <span class="label text-stone-mid">Volume 01 / Closing</span>
+      </div>
+      <div class="flex flex-col gap-1 text-right">
+        <span class="label">End of portfolio</span>
+        <span class="label text-stone-mid">Begin conversation</span>
+      </div>
+    </div>
+
+    <!-- Massive headline -->
+    <div class="mb-12 md:mb-20">
+      <h2 class="font-display font-black text-mega">
+        <span class="block">Let's</span>
+        <span class="block italic font-normal pl-[6%] md:pl-[12%]">make</span>
+        <span class="block">something<span>.</span></span>
+      </h2>
+    </div>
+
+    <!-- Closing paragraph -->
+    <div class="grid grid-cols-12 gap-y-8 md:gap-y-0 gap-x-4 mb-16 md:mb-24 pt-8 border-t border-paper">
+      <div class="col-span-12 md:col-span-7">
+        <p class="editorial-lead">
+          If you have a project at the intersection of engineering and
+          design — or just want to compare notes on headless architecture,
+          album covers, or Celtic orchestration — the door is open.
+        </p>
+      </div>
+      <div class="col-span-12 md:col-span-3 md:col-start-10 self-end">
+        <div class="label text-stone-mid mb-2">Response time</div>
+        <div class="font-body">Within a few days</div>
+      </div>
+    </div>
+
+    <!-- Contact links -->
+    <div class="border-t border-paper">
+
+      <a href="mailto:hello@jabiralawfaa.com" class="group grid grid-cols-12 gap-4 py-6 md:py-8 border-b border-paper items-center transition-colors hover:bg-stone-dark">
+        <div class="col-span-3 md:col-span-2">
+          <span class="label text-stone-mid group-hover:text-paper">A. Email</span>
+        </div>
+        <div class="col-span-7 md:col-span-8">
+          <span class="font-display text-xl md:text-3xl link-underline">hello@jabiralawfaa.com</span>
+        </div>
+        <div class="col-span-2 md:col-span-2 text-right">
+          <span class="label project-row-arrow inline-block">→</span>
+        </div>
+      </a>
+
+      <a href="#" class="group grid grid-cols-12 gap-4 py-6 md:py-8 border-b border-paper items-center transition-colors hover:bg-stone-dark">
+        <div class="col-span-3 md:col-span-2">
+          <span class="label text-stone-mid group-hover:text-paper">B. GitHub</span>
+        </div>
+        <div class="col-span-7 md:col-span-8">
+          <span class="font-display text-xl md:text-3xl link-underline">github.com/jabiralawfaa</span>
+        </div>
+        <div class="col-span-2 md:col-span-2 text-right">
+          <span class="label project-row-arrow inline-block">→</span>
+        </div>
+      </a>
+
+      <a href="#" class="group grid grid-cols-12 gap-4 py-6 md:py-8 border-b border-paper items-center transition-colors hover:bg-stone-dark">
+        <div class="col-span-3 md:col-span-2">
+          <span class="label text-stone-mid group-hover:text-paper">C. LinkedIn</span>
+        </div>
+        <div class="col-span-7 md:col-span-8">
+          <span class="font-display text-xl md:text-3xl link-underline">linkedin.com/in/rusydi-jabir</span>
+        </div>
+        <div class="col-span-2 md:col-span-2 text-right">
+          <span class="label project-row-arrow inline-block">→</span>
+        </div>
+      </a>
+
+      <a href="#" class="group grid grid-cols-12 gap-4 py-6 md:py-8 border-b border-paper items-center transition-colors hover:bg-stone-dark">
+        <div class="col-span-3 md:col-span-2">
+          <span class="label text-stone-mid group-hover:text-paper">D. Instagram</span>
+        </div>
+        <div class="col-span-7 md:col-span-8">
+          <span class="font-display text-xl md:text-3xl link-underline">@jabiralawfaa</span>
+        </div>
+        <div class="col-span-2 md:col-span-2 text-right">
+          <span class="label project-row-arrow inline-block">→</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Sign-off -->
+    <div class="grid grid-cols-12 gap-4 mt-16 md:mt-24 pt-8 border-t border-paper">
+      <div class="col-span-12 md:col-span-6">
+        <p class="font-display italic text-lg md:text-xl text-stone-mid">
+          Thank you for reading to the end of this index.
+        </p>
+      </div>
+      <div class="col-span-12 md:col-span-3 md:col-start-10 self-end md:text-right">
+        <span class="label text-stone-mid">— Rusydi Jabir Al-awfa</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- ============== 11 — FOOTER ============== -->
+<footer class="px-6 md:px-10 py-10 md:py-12 border-t border-ink">
+  <div class="max-w-editorial mx-auto w-full">
+
+    <div class="grid grid-cols-12 gap-y-6 md:gap-y-0 gap-x-4 items-end pb-6 border-b border-ink mb-6">
+      <div class="col-span-12 md:col-span-6">
+        <div class="font-display text-3xl md:text-4xl font-black leading-none">Rusydi Jabir Al-awfa<span class="text-stone-dark">.</span></div>
+        <div class="label text-stone-dark mt-2">Software Developer &amp; Graphic Designer</div>
+      </div>
+
+      <div class="col-span-6 md:col-span-3 md:col-start-8">
+        <div class="label text-stone-dark mb-2">Elsewhere</div>
+        <div class="flex flex-col gap-1">
+          <a href="#" class="label link-underline inline-block w-fit">GitHub</a>
+          <a href="#" class="label link-underline inline-block w-fit">LinkedIn</a>
+          <a href="#" class="label link-underline inline-block w-fit">Instagram</a>
+        </div>
+      </div>
+
+      <div class="col-span-6 md:col-span-3 md:col-start-11 md:text-right">
+        <div class="label text-stone-dark mb-2">Index</div>
+        <a href="#hero" class="label link-underline inline-block">Back to top ↑</a>
+      </div>
+    </div>
+
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+      <div class="label text-stone-dark">
+        © <span id="footer-year">2024</span> · Rusydi Jabir Al-awfa · All rights reserved
+      </div>
+      <div class="label text-stone-dark">
+        Edition I · Volume 01 · <span class="tabular">001 / 010</span>
+      </div>
+      <div class="label text-stone-dark">
+        Built with intention · No template
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  // Footer year
+  (function setYear() {
+    var y = new Date().getFullYear();
+    var el = document.getElementById('footer-year');
+    if (el) el.textContent = y;
+  })();
+
+  // Back-to-top: smooth scroll handled by CSS scroll-behavior.
+</script>
+
+</body>
 </html>
