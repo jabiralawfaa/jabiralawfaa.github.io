@@ -1,0 +1,66 @@
+{
+  "section": {
+    "index": "06",
+    "label": "Creative Lab",
+    "title": "The Lab",
+    "asideLines": ["Experiments", "& side work"],
+    "introTitle": [
+      { "text": "Experiments", "style": "default", "indent": 0 },
+      { "text": "that don't fit", "style": "italic", "indent": 0 },
+      { "text": "elsewhere.", "style": "default", "indent": 0 }
+    ],
+    "introText": "A working directory of music, visual studies, and small coding experiments. Things made for curiosity, not for outcome."
+  },
+  "experiments": [
+    {
+      "id": "e01",
+      "label": "Music · Suno AI",
+      "number": "E.01",
+      "title": "AI-Assisted Composition",
+      "description": "A series of tracks produced with Suno AI, used as a sandbox for thinking about authorship, structure, and the moment where a tool becomes a collaborator.",
+      "image": "https://picsum.photos/seed/lab-suno/1200/750",
+      "imageAlt": "AI music composition waveform visual",
+      "size": "half"
+    },
+    {
+      "id": "e02",
+      "label": "Music · Orchestra",
+      "number": "E.02",
+      "title": "Celtic Orchestral Sketches",
+      "description": "Sketches for orchestral pieces with Celtic influences. An ongoing study of arrangement, motif development, and instrumental balance.",
+      "image": "https://picsum.photos/seed/lab-celtic/1200/750",
+      "imageAlt": "Orchestral celtic music composition visual",
+      "size": "half"
+    },
+    {
+      "id": "e03",
+      "label": "Visual · Album",
+      "number": "E.03",
+      "title": "Cover Experiments",
+      "description": "Covers produced alongside the music — testing whether a single image can carry the same weight as a track.",
+      "image": "https://picsum.photos/seed/lab-cover/800/800",
+      "imageAlt": "Album cover experiment visual",
+      "size": "third"
+    },
+    {
+      "id": "e04",
+      "label": "Code · Creative",
+      "number": "E.04",
+      "title": "Generative Systems",
+      "description": "Small creative coding pieces exploring rule-based composition, typography as data, and grids as instruments.",
+      "image": "https://picsum.photos/seed/lab-generative/800/800",
+      "imageAlt": "Generative code composition visual",
+      "size": "third"
+    },
+    {
+      "id": "e05",
+      "label": "Interface · Exp.",
+      "number": "E.05",
+      "title": "Experimental Interfaces",
+      "description": "Interface prototypes built without a brief — testing how much of an interface can be stripped before meaning collapses.",
+      "image": "https://picsum.photos/seed/lab-interface/800/800",
+      "imageAlt": "Experimental interface prototype visual",
+      "size": "third"
+    }
+  ]
+}

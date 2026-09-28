@@ -1,0 +1,45 @@
+{
+  "section": {
+    "index": "10",
+    "label": "Contact",
+    "volumeLabel": "Volume 01 / Closing",
+    "topRightLabel": "End of portfolio",
+    "topRightSub": "Begin conversation"
+  },
+  "headlineLines": [
+    { "text": "Let's", "style": "default", "indent": 0 },
+    { "text": "make", "style": "italic", "indent": 12 },
+    { "text": "something.", "style": "default", "indent": 0 }
+  ],
+  "lead": "If you have a project at the intersection of engineering and design — or just want to compare notes on headless architecture, album covers, or Celtic orchestration — the door is open.",
+  "responseLabel": "Response time",
+  "responseTime": "Within a few days",
+  "links": [
+    {
+      "letter": "A",
+      "label": "Email",
+      "display": "hello@jabiralawfaa.com",
+      "href": "mailto:hello@jabiralawfaa.com"
+    },
+    {
+      "letter": "B",
+      "label": "GitHub",
+      "display": "github.com/jabiralawfaa",
+      "href": "https://github.com/jabiralawfaa"
+    },
+    {
+      "letter": "C",
+      "label": "LinkedIn",
+      "display": "linkedin.com/in/rusydi-jabir",
+      "href": "#"
+    },
+    {
+      "letter": "D",
+      "label": "Instagram",
+      "display": "@jabiralawfaa",
+      "href": "#"
+    }
+  ],
+  "signOff": "Thank you for reading to the end of this index.",
+  "signature": "— Rusydi Jabir Al-awfa"
+}

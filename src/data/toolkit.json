@@ -1,0 +1,51 @@
+{
+  "section": {
+    "index": "09",
+    "label": "Capabilities",
+    "title": "Toolkit",
+    "asideLines": ["What I can", "actually do"],
+    "intro": "A concise summary of what I can do — grouped by the kind of work each capability tends to produce. Not exhaustive, not aspirational.",
+    "asideNoteLines": ["Three", "directions"]
+  },
+  "columns": [
+    {
+      "id": "build",
+      "letter": "A",
+      "title": "Build",
+      "italic": false,
+      "items": [
+        "Web applications",
+        "Frontend interfaces",
+        "Digital products",
+        "Developer tools",
+        "UI implementation"
+      ]
+    },
+    {
+      "id": "design",
+      "letter": "B",
+      "title": "Design",
+      "italic": true,
+      "items": [
+        "Graphic design",
+        "Visual identity",
+        "Digital artwork",
+        "Album artwork",
+        "Posters & covers"
+      ]
+    },
+    {
+      "id": "explore",
+      "letter": "C",
+      "title": "Explore",
+      "italic": false,
+      "items": [
+        "Creative technology",
+        "Experimental interfaces",
+        "Research",
+        "Music & visual experimentation",
+        "Creative coding"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "section": {
+    "index": "03",
+    "label": "Selected Work",
+    "title": "Projects",
+    "asideLines": ["Index of", "selected work"],
+    "intro": "A selection of work spanning web applications, developer tools, academic research, and visual projects. Each entry is labelled by category, technology, and year — not by ranking.",
+    "dateRange": "2018 — 2026"
+  },
+  "featured": {
+    "category": "Web Application · Development",
+    "title": "LokaHub",
+    "description": "A community-oriented web platform built around local interaction, discovery, and shared resources. Designed and developed end-to-end with a focus on clarity and accessible interface patterns.",
+    "stack": "React · Laravel · Firebase",
+    "year": "2026",
+    "type": "Personal Project",
+    "role": "Design & Development",
+    "image": "https://picsum.photos/seed/lokahub-feature/1600/1000",
+    "imageAlt": "LokaHub web application interface preview",
+    "ctaLabel": "View project",
+    "href": "#"
+  },
+  "projects": [
+    {
+      "index": "02",
+      "title": "Portfolio Builder",
+      "description": "A tool for assembling personal portfolio sites from structured content.",
+      "stack": "React · Vite",
+      "year": "2026",
+      "href": "#"
+    },
+    {
+      "index": "03",
+      "title": "Wedding Invitation Website",
+      "description": "Digital wedding invitation platform with RSVP and guest management.",
+      "stack": "Laravel · PHP",
+      "year": "2026",
+      "href": "#"
+    },
+    {
+      "index": "04",
+      "title": "Laravel & PHP Packages",
+      "description": "Reusable packages and utilities for Laravel workflows.",
+      "stack": "Laravel · PHP",
+      "year": "2026",
+      "href": "#"
+    },
+    {
+      "index": "05",
+      "title": "GitHub SDK Experiments",
+      "description": "Explorations around GitHub API integration and developer tooling.",
+      "stack": "JavaScript · API",
+      "year": "2026",
+      "href": "#"
+    }
+  ],
+  "album": {
+    "category": "Creative · Visual",
+    "title": "Album Artwork Series",
+    "description": "A series of cover artwork exploring typographic and photographic composition. The project doubles as a testing ground for visual systems that later feed back into interface work.",
+    "discipline": "Graphic Design",
+    "year": "2026",
+    "image": "https://picsum.photos/seed/album-artwork/1200/1600",
+    "imageAlt": "Album artwork visual preview",
+    "ctaLabel": "View series",
+    "href": "#"
+  },
+  "research": {
+    "label": "Research · Academic",
+    "title": "Headless Low-Code",
+    "subtitle": "Web Application Builder",
+    "tags": ["Architecture", "Abstraction Layers", "2026"],
+    "description": "An academic research project investigating how headless low-code architectures can be structured to support composable, decoupled web application builders. See the Research section for full context.",
+    "image": "https://picsum.photos/seed/research-headless/2400/1030",
+    "imageAlt": "Headless low-code architecture diagram preview",
+    "ctaLabel": "Read the research →",
+    "href": "#research"
+  },
+  "posters": {
+    "category": "Creative Coding",
+    "title": "Generative Posters",
+    "description": "A growing archive of poster compositions generated from typographic rules and modular grid systems. A space to test ideas that often become client work.",
+    "images": [
+      {
+        "src": "https://picsum.photos/seed/poster-one/800/1067",
+        "alt": "Generative poster composition one"
+      },
+      {
+        "src": "https://picsum.photos/seed/poster-two/800/1067",
+        "alt": "Generative poster composition two"
+      }
+    ]
+  }
+}

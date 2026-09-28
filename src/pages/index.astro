@@ -1,0 +1,751 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import hero from '../data/hero.json';
+import about from '../data/about.json';
+import projects from '../data/projects.json';
+import stack from '../data/stack.json';
+import design from '../data/design.json';
+import lab from '../data/lab.json';
+import research from '../data/research.json';
+import experience from '../data/experience.json';
+import toolkit from '../data/toolkit.json';
+import contact from '../data/contact.json';
+
+type Line = { text: string; style: string; indent: number };
+
+// Render a big typographic line: default / italic + percentage indent
+const lineClass = (style: string) =>
+  style === 'italic' ? 'block italic font-normal text-stone-dark' : 'block';
+
+const indentStyle = (indent: number) =>
+  indent > 0 ? `padding-left: ${indent}%;` : undefined;
+
+const [stackA, stackB, stackC, stackD] = stack.groups;
+const marqueeSet = [...stack.marquee, ...stack.marquee];
+---
+
+<BaseLayout>
+  <!-- ============== 01 — HERO ============== -->
+  <section id="hero" class="min-h-[calc(100vh-65px)] flex flex-col px-6 md:px-10 pt-10 md:pt-12 pb-6 md:pb-8">
+    <div class="max-w-editorial mx-auto w-full flex-1 flex flex-col">
+      <div class="flex items-start justify-between gap-6 pb-6 md:pb-8 border-b border-ink">
+        <div class="flex flex-col gap-1">
+          <span class="label">{hero.meta.portfolioLabel}</span>
+          <span class="label text-stone-dark">{hero.meta.volumeLabel}</span>
+        </div>
+        <div class="flex flex-col gap-1 text-right">
+          <span class="label">{hero.meta.locationLabel}</span>
+          <span class="label text-stone-dark">{hero.meta.availabilityLabel}</span>
+        </div>
+      </div>
+
+      <div class="flex-1 flex flex-col justify-center py-8 md:py-12">
+        <div class="label mb-6 md:mb-10">{hero.meta.indexLabel}</div>
+        <h1 class="font-display font-black text-mega">
+          {hero.nameLines.map((line: Line) => (
+            <span class={lineClass(line.style)} style={indentStyle(line.indent)}>{line.text}</span>
+          ))}
+        </h1>
+      </div>
+
+      <div class="grid grid-cols-12 gap-y-8 gap-x-4 pt-6 md:pt-8 border-t border-ink">
+        <div class="col-span-12 md:col-span-7">
+          <p class="editorial-lead max-w-2xl" set:html={hero.lead.replace('engineering', '<em class="font-display italic">engineering</em>').replace('visual communication', '<em class="font-display italic">visual communication</em>')} />
+        </div>
+        <div class="col-span-12 md:col-span-4 md:col-start-9 flex flex-col gap-3 self-end">
+          {hero.cta.map((item) => (
+            <a href={item.href} class="group flex items-center justify-between border border-ink px-4 py-3 hover-invert">
+              <span class="label-lg">{item.label}</span>
+              <span class="label hover-arrow transition-transform inline-block">{item.arrow}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div class="hidden md:flex items-center justify-between mt-6 pt-4 border-t border-stone-mid">
+        <span class="label text-stone-dark">{hero.scrollHint}</span>
+        <span class="label text-stone-dark tabular">{hero.pageMarker}</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 02 — ABOUT ============== -->
+  <section id="about" class="px-6 md:px-10 py-24 md:py-32 border-t border-ink">
+    <div class="max-w-editorial mx-auto w-full">
+      <div class="flex items-end justify-between gap-6 pb-6 md:pb-8 border-b border-ink mb-12 md:mb-20">
+        <div>
+          <div class="label mb-3">{about.section.index} — {about.section.label}</div>
+          <h2 class="font-display font-black text-headline">{about.section.title}</h2>
+        </div>
+        <div class="label text-stone-dark text-right hidden md:block" set:html={about.section.asideLines.join('<br />')} />
+      </div>
+
+      <div class="grid grid-cols-12 gap-y-12 md:gap-y-0 gap-x-4">
+        <div class="col-span-12 md:col-span-7">
+          <h3 class="font-display font-black text-display">
+            {about.statementLines.map((line: Line) => (
+              <span class={lineClass(line.style)} style={indentStyle(line.indent)}>{line.text}</span>
+            ))}
+          </h3>
+        </div>
+
+        <div class="col-span-12 md:col-span-4 md:col-start-9 flex flex-col gap-8">
+          <p class="editorial-lead">{about.lead}</p>
+          <p class="text-stone-dark leading-relaxed">{about.supporting}</p>
+          <div class="grid grid-cols-2 gap-x-4 gap-y-4 pt-6 border-t border-ink">
+            {about.meta.map((item) => (
+              <div>
+                <div class="label text-stone-dark mb-1">{item.label}</div>
+                <div class="font-body">{item.value}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 03 — SELECTED WORK ============== -->
+  <section id="work" class="px-6 md:px-10 py-24 md:py-32 border-t border-ink">
+    <div class="max-w-editorial mx-auto w-full">
+      <div class="flex items-end justify-between gap-6 pb-6 md:pb-8 border-b border-ink mb-12 md:mb-20">
+        <div>
+          <div class="label mb-3">{projects.section.index} — {projects.section.label}</div>
+          <h2 class="font-display font-black text-headline">{projects.section.title}</h2>
+        </div>
+        <div class="label text-stone-dark text-right hidden md:block" set:html={projects.section.asideLines.join('<br />')} />
+      </div>
+
+      <div class="grid grid-cols-12 gap-4 mb-16 md:mb-24">
+        <div class="col-span-12 md:col-span-8">
+          <p class="editorial-lead">{projects.section.intro}</p>
+        </div>
+        <div class="col-span-12 md:col-span-2 md:col-start-11 self-end">
+          <div class="label text-stone-dark text-right">Works<br />{projects.section.dateRange}</div>
+        </div>
+      </div>
+
+      <!-- Featured project -->
+      <article class="grid grid-cols-12 gap-y-8 md:gap-x-4 mb-20 md:mb-28">
+        <div class="col-span-12 md:col-span-7">
+          <div class="image-frame aspect-wide border border-ink">
+            <img src={projects.featured.image} alt={projects.featured.imageAlt} class="w-full h-full object-cover" loading="eager" />
+          </div>
+        </div>
+        <div class="col-span-12 md:col-span-4 md:col-start-9 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between border-b border-ink pb-3 mb-6">
+              <span class="label">Featured</span>
+              <span class="label tabular">01 / 08</span>
+            </div>
+            <div class="label text-stone-dark mb-2">{projects.featured.category}</div>
+            <h3 class="font-display font-black text-large mb-4">{projects.featured.title}</h3>
+            <p class="text-stone-dark leading-relaxed mb-6">{projects.featured.description}</p>
+            <div class="grid grid-cols-2 gap-x-4 gap-y-3 mb-6">
+              <div>
+                <div class="label text-stone-dark mb-1">Stack</div>
+                <div class="font-body text-sm">{projects.featured.stack}</div>
+              </div>
+              <div>
+                <div class="label text-stone-dark mb-1">Year</div>
+                <div class="font-body text-sm tabular">{projects.featured.year}</div>
+              </div>
+              <div>
+                <div class="label text-stone-dark mb-1">Type</div>
+                <div class="font-body text-sm">{projects.featured.type}</div>
+              </div>
+              <div>
+                <div class="label text-stone-dark mb-1">Role</div>
+                <div class="font-body text-sm">{projects.featured.role}</div>
+              </div>
+            </div>
+          </div>
+          <a href={projects.featured.href} class="group inline-flex items-center justify-between border border-ink px-4 py-3 hover-invert">
+            <span class="label-lg">{projects.featured.ctaLabel}</span>
+            <span class="label hover-arrow">→</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- Project rows -->
+      <div class="border-t border-ink">
+        {projects.projects.map((project) => (
+          <a href={project.href} class="project-row block border-b border-ink py-6 md:py-8 group">
+            <div class="grid grid-cols-12 gap-4 items-baseline">
+              <div class="col-span-2 md:col-span-1">
+                <span class="label tabular text-stone-dark">{project.index}</span>
+              </div>
+              <div class="col-span-10 md:col-span-4">
+                <h3 class="font-display font-bold text-2xl md:text-3xl leading-tight">{project.title}</h3>
+              </div>
+              <div class="col-span-7 md:col-span-3">
+                <p class="text-sm text-stone-dark leading-relaxed">{project.description}</p>
+              </div>
+              <div class="col-span-3 md:col-span-2 label text-stone-dark">
+                {project.stack}
+              </div>
+              <div class="col-span-2 md:col-span-1 label tabular text-stone-dark text-right">{project.year}</div>
+              <div class="hidden md:block col-span-1 text-right">
+                <span class="label project-row-arrow inline-block">→</span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <!-- Album artwork split -->
+      <article class="grid grid-cols-12 gap-y-8 md:gap-x-4 mt-20 md:mt-28">
+        <div class="col-span-12 md:col-span-5">
+          <div class="image-frame aspect-portrait border border-ink">
+            <img src={projects.album.image} alt={projects.album.imageAlt} class="w-full h-full object-cover" loading="lazy" />
+          </div>
+        </div>
+        <div class="col-span-12 md:col-span-6 md:col-start-7 flex flex-col justify-center">
+          <div class="flex items-center justify-between border-b border-ink pb-3 mb-6">
+            <span class="label">Design · Visual</span>
+            <span class="label tabular">06 / 08</span>
+          </div>
+          <div class="label text-stone-dark mb-2">{projects.album.category}</div>
+          <h3 class="font-display font-black text-large mb-4">{projects.album.title}</h3>
+          <p class="text-stone-dark leading-relaxed mb-6 max-w-md">{projects.album.description}</p>
+          <div class="grid grid-cols-2 gap-x-4 gap-y-3 mb-6 max-w-md">
+            <div>
+              <div class="label text-stone-dark mb-1">Discipline</div>
+              <div class="font-body text-sm">{projects.album.discipline}</div>
+            </div>
+            <div>
+              <div class="label text-stone-dark mb-1">Year</div>
+              <div class="font-body text-sm tabular">{projects.album.year}</div>
+            </div>
+          </div>
+          <a href={projects.album.href} class="group inline-flex items-center gap-3 self-start px-4 py-3 hover-invert border border-ink">
+            <span class="label-lg">{projects.album.ctaLabel}</span>
+            <span class="label hover-arrow">→</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- Research full-bleed -->
+      <article class="mt-20 md:mt-28">
+        <div class="relative image-frame aspect-cinema border border-ink">
+          <img src={projects.research.image} alt={projects.research.imageAlt} class="w-full h-full object-cover" loading="lazy" />
+          <div class="absolute inset-0 bg-ink/40 flex flex-col justify-end p-6 md:p-12">
+            <div class="flex items-center justify-between mb-4 md:mb-6 text-paper">
+              <span class="label">{projects.research.label}</span>
+              <span class="label tabular">07 / 08</span>
+            </div>
+            <h3 class="font-display font-black text-paper text-3xl md:text-5xl lg:text-6xl leading-none max-w-3xl">
+              {projects.research.title}<br />
+              <span class="italic font-normal">{projects.research.subtitle}</span>
+            </h3>
+            <div class="flex flex-wrap items-center gap-6 mt-6 md:mt-8 text-paper">
+              {projects.research.tags.map((tag) => <span class="label">{tag}</span>)}
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-12 gap-4 mt-6">
+          <div class="col-span-12 md:col-span-6 md:col-start-1">
+            <p class="text-stone-dark leading-relaxed">{projects.research.description}</p>
+          </div>
+          <div class="col-span-12 md:col-span-3 md:col-start-10 self-end md:text-right">
+            <a href={projects.research.href} class="label link-underline inline-block">{projects.research.ctaLabel}</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Generative posters -->
+      <article class="grid grid-cols-12 gap-y-8 md:gap-x-4 mt-20 md:mt-28 pt-12 border-t border-ink">
+        <div class="col-span-12 md:col-span-4">
+          <div class="flex items-center justify-between border-b border-ink pb-3 mb-6">
+            <span class="label">Experiment · Personal</span>
+            <span class="label tabular">08 / 08</span>
+          </div>
+          <div class="label text-stone-dark mb-2">{projects.posters.category}</div>
+          <h3 class="font-display font-black text-large mb-4">{projects.posters.title}</h3>
+          <p class="text-stone-dark leading-relaxed">{projects.posters.description}</p>
+        </div>
+        <div class="col-span-12 md:col-span-7 md:col-start-6 grid grid-cols-2 gap-4">
+          {projects.posters.images.map((img) => (
+            <div class="image-frame aspect-portrait border border-ink">
+              <img src={img.src} alt={img.alt} class="w-full h-full object-cover" loading="lazy" />
+            </div>
+          ))}
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============== 04 — DEVELOPMENT ============== -->
+  <section id="development" class="px-6 md:px-10 py-24 md:py-32 border-t border-ink bg-stone-light">
+    <div class="max-w-editorial mx-auto w-full">
+      <div class="flex items-end justify-between gap-6 pb-6 md:pb-8 border-b border-ink mb-12 md:mb-20">
+        <div>
+          <div class="label mb-3">{stack.section.index} — {stack.section.label}</div>
+          <h2 class="font-display font-black text-headline">{stack.section.title}</h2>
+        </div>
+        <div class="label text-stone-dark text-right hidden md:block" set:html={stack.section.asideLines.join('<br />')} />
+      </div>
+
+      <div class="grid grid-cols-12 gap-y-12 md:gap-y-0 gap-x-4 mb-12 md:mb-16">
+        <div class="col-span-12 md:col-span-7">
+          <p class="editorial-lead">{stack.section.intro}</p>
+        </div>
+        <div class="col-span-12 md:col-span-3 md:col-start-10 self-end">
+          <div class="label text-stone-dark" set:html={stack.section.asideNoteLines.join('<br />')} />
+        </div>
+      </div>
+
+      <div class="grid grid-cols-12 gap-x-4 gap-y-12">
+        <div class="col-span-12 md:col-span-6 md:border-r md:border-ink md:pr-8">
+          <div class="flex items-baseline justify-between border-b border-ink pb-3 mb-6">
+            <span class="label-lg">{stackA.label}</span>
+            <span class="label tabular text-stone-dark">{stackA.itemsLabel}</span>
+          </div>
+          <ul class="space-y-3">
+            {stackA.items.map((item) => (
+              <li class="flex items-baseline justify-between gap-4">
+                <span class="font-display text-xl md:text-2xl">{item.name}</span>
+                <span class="label text-stone-dark">{item.role}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="col-span-12 md:col-span-6 md:pl-8">
+          <div class="flex items-baseline justify-between border-b border-ink pb-3 mb-6">
+            <span class="label-lg">{stackB.label}</span>
+            <span class="label tabular text-stone-dark">{stackB.itemsLabel}</span>
+          </div>
+          <ul class="space-y-3">
+            {stackB.items.map((item) => (
+              <li class="flex items-baseline justify-between gap-4">
+                <span class="font-display text-xl md:text-2xl">{item.name}</span>
+                <span class="label text-stone-dark">{item.role}</span>
+              </li>
+            ))}
+          </ul>
+
+          <div class="flex items-baseline justify-between border-b border-ink pb-3 mb-6 mt-12">
+            <span class="label-lg">{stackC.label}</span>
+            <span class="label tabular text-stone-dark">{stackC.itemsLabel}</span>
+          </div>
+          <ul class="space-y-3">
+            {stackC.items.map((item) => (
+              <li class="flex items-baseline justify-between gap-4">
+                <span class="font-display text-xl md:text-2xl">{item.name}</span>
+                <span class="label text-stone-dark">{item.role}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="col-span-12 md:col-span-12 md:border-t md:border-ink md:pt-12 mt-4 md:mt-12">
+          <div class="flex items-baseline justify-between border-b border-ink pb-3 mb-6">
+            <span class="label-lg">{stackD.label}</span>
+            <span class="label tabular text-stone-dark">{stackD.itemsLabel}</span>
+          </div>
+          <ul class="grid grid-cols-2 md:grid-cols-4 gap-y-6 gap-x-4">
+            {stackD.items.map((item) => (
+              <li class="flex flex-col gap-1">
+                <span class="font-display text-xl md:text-2xl">{item.name}</span>
+                <span class="label text-stone-dark">{item.role}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-16 md:mt-24 border-t border-b border-ink py-4 overflow-hidden marquee-container">
+        <div class="marquee-track flex gap-12 whitespace-nowrap will-change-transform">
+          {marqueeSet.map((tech, i) => (
+            <>
+              <span class={`font-display text-2xl md:text-3xl ${i % 2 === 1 ? 'italic' : ''}`}>{tech}</span>
+              <span class="font-display text-2xl md:text-3xl text-stone-dark">·</span>
+            </>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 05 — DESIGN ============== -->
+  <section id="design" class="px-6 md:px-10 py-24 md:py-32 border-t border-ink">
+    <div class="max-w-editorial mx-auto w-full">
+      <div class="flex items-end justify-between gap-6 pb-6 md:pb-8 border-b border-ink mb-12 md:mb-20">
+        <div>
+          <div class="label mb-3">{design.section.index} — {design.section.label}</div>
+          <h2 class="font-display font-black text-headline">{design.section.title}</h2>
+        </div>
+        <div class="label text-stone-dark text-right hidden md:block" set:html={design.section.asideLines.join('<br />')} />
+      </div>
+
+      <div class="grid grid-cols-12 gap-4 mb-12 md:mb-20">
+        <div class="col-span-12 md:col-span-7">
+          <h3 class="font-display font-black text-display">
+            {design.section.introTitle.map((line: Line) => (
+              <span class={lineClass(line.style)} style={indentStyle(line.indent)}>{line.text}</span>
+            ))}
+          </h3>
+        </div>
+        <div class="col-span-12 md:col-span-4 md:col-start-9 self-end">
+          <p class="text-stone-dark leading-relaxed">{design.section.introText}</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-12 gap-y-8 md:gap-y-12 gap-x-4 md:gap-x-6">
+        <!-- Series 01 -->
+        {design.series.map((series) => (
+          <>
+            <div class="col-span-12 md:col-span-8">
+              <div class="image-frame aspect-wide border border-ink">
+                <img src={series.image} alt={series.imageAlt} class="w-full h-full object-cover" loading="lazy" />
+              </div>
+            </div>
+            <div class="col-span-12 md:col-span-3 md:col-start-10 flex flex-col justify-end">
+              <div class="label text-stone-dark mb-2">{series.label}</div>
+              <h4 class="font-display text-xl md:text-2xl mb-3">{series.title}</h4>
+              <p class="text-sm text-stone-dark leading-relaxed mb-4">{series.description}</p>
+              <div class="label text-stone-dark">{series.meta}</div>
+            </div>
+          </>
+        ))}
+
+        <!-- Four covers -->
+        {design.covers.map((cover) => (
+          <div class="col-span-6 md:col-span-3">
+            <div class="image-frame aspect-square border border-ink">
+              <img src={cover.src} alt={cover.alt} class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="flex items-baseline justify-between mt-3">
+              <span class="label">{cover.label}</span>
+              <span class="label tabular text-stone-dark">{cover.number}</span>
+            </div>
+          </div>
+        ))}
+
+        <!-- Posters + approach -->
+        <div class="col-span-6 md:col-span-4">
+          <div class="image-frame aspect-portrait border border-ink">
+            <img src={design.posters[0].src} alt={design.posters[0].alt} class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="flex items-baseline justify-between mt-3">
+            <span class="label">{design.posters[0].label}</span>
+            <span class="label tabular text-stone-dark">{design.posters[0].meta}</span>
+          </div>
+        </div>
+        <div class="col-span-12 md:col-span-4 flex flex-col justify-center px-2 md:px-4 py-4">
+          <div class="label text-stone-dark mb-3">{design.approach.label}</div>
+          <h4 class="font-display text-xl md:text-2xl mb-3 leading-tight">{design.approach.title}</h4>
+          <p class="text-sm text-stone-dark leading-relaxed">{design.approach.text}</p>
+        </div>
+        <div class="col-span-6 md:col-span-4">
+          <div class="image-frame aspect-portrait border border-ink">
+            <img src={design.posters[1].src} alt={design.posters[1].alt} class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="flex items-baseline justify-between mt-3">
+            <span class="label">{design.posters[1].label}</span>
+            <span class="label tabular text-stone-dark">{design.posters[1].meta}</span>
+          </div>
+        </div>
+
+        <!-- Banner -->
+        <div class="col-span-12 md:col-span-12 mt-4">
+          <div class="image-frame aspect-cinema border border-ink">
+            <img src={design.banner.src} alt={design.banner.alt} class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="flex items-baseline justify-between mt-3">
+            <span class="label">{design.banner.label}</span>
+            <span class="label tabular text-stone-dark">{design.banner.meta}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 06 — CREATIVE LAB ============== -->
+  <section id="lab" class="px-6 md:px-10 py-24 md:py-32 border-t border-ink bg-stone-light">
+    <div class="max-w-editorial mx-auto w-full">
+      <div class="flex items-end justify-between gap-6 pb-6 md:pb-8 border-b border-ink mb-12 md:mb-20">
+        <div>
+          <div class="label mb-3">{lab.section.index} — {lab.section.label}</div>
+          <h2 class="font-display font-black text-headline italic">{lab.section.title}</h2>
+        </div>
+        <div class="label text-stone-dark text-right hidden md:block" set:html={lab.section.asideLines.join('<br />')} />
+      </div>
+
+      <div class="grid grid-cols-12 gap-y-8 md:gap-y-0 gap-x-4 mb-16 md:mb-20">
+        <div class="col-span-12 md:col-span-8">
+          <h3 class="font-display font-black text-display">
+            {lab.section.introTitle.map((line: Line) => (
+              <span class={lineClass(line.style)} style={indentStyle(line.indent)}>{line.text}</span>
+            ))}
+          </h3>
+        </div>
+        <div class="col-span-12 md:col-span-3 md:col-start-10 self-end">
+          <p class="text-stone-dark leading-relaxed">{lab.section.introText}</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-12 gap-y-12 md:gap-y-16 gap-x-4 md:gap-x-6">
+        {lab.experiments.map((exp) => (
+          <article class:list={[
+            'col-span-12',
+            exp.size === 'half' ? 'md:col-span-6' : 'md:col-span-4',
+            exp.id === 'e01' ? 'md:border-r md:border-ink md:pr-6' : '',
+            exp.id === 'e02' ? 'md:pl-6' : '',
+            exp.id === 'e03' ? 'md:border-r md:border-ink md:pr-6' : '',
+            exp.id === 'e04' ? 'md:border-r md:border-ink md:pr-6 md:pl-6' : '',
+            exp.id === 'e05' ? 'md:pl-6' : '',
+          ]}>
+            <div class="flex items-baseline justify-between border-b border-ink pb-3 mb-6">
+              <span class="label">{exp.label}</span>
+              <span class="label tabular text-stone-dark">{exp.number}</span>
+            </div>
+            <h4 class={`font-display font-bold mb-3 ${exp.size === 'half' ? 'text-2xl md:text-3xl' : 'text-xl md:text-2xl'}`}>{exp.title}</h4>
+            <p class="text-sm text-stone-dark leading-relaxed mb-6">{exp.description}</p>
+            <div class={`image-frame border border-ink ${exp.size === 'half' ? 'aspect-wide' : 'aspect-square'}`}>
+              <img src={exp.image} alt={exp.imageAlt} class="w-full h-full object-cover" loading="lazy" />
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 07 — RESEARCH ============== -->
+  <section id="research" class="px-6 md:px-10 py-24 md:py-32 border-t border-ink">
+    <div class="max-w-editorial mx-auto w-full">
+      <div class="flex items-end justify-between gap-6 pb-6 md:pb-8 border-b border-ink mb-12 md:mb-20">
+        <div>
+          <div class="label mb-3">{research.section.index} — {research.section.label}</div>
+          <h2 class="font-display font-black text-headline">{research.section.title}</h2>
+        </div>
+        <div class="label text-stone-dark text-right hidden md:block" set:html={research.section.asideLines.join('<br />')} />
+      </div>
+
+      <div class="grid grid-cols-12 gap-y-8 md:gap-y-0 gap-x-4 mb-16 md:mb-24">
+        <div class="col-span-12 md:col-span-9">
+          <div class="label text-stone-dark mb-6">{research.topic.label}</div>
+          <h3 class="font-display font-black text-display leading-[0.88]">
+            {research.topic.titleLines.map((line: Line, i: number) => (
+              <span class={i === 1 ? 'block italic font-normal text-stone-dark' : 'block'}>{line.text}</span>
+            ))}
+          </h3>
+        </div>
+        <div class="col-span-12 md:col-span-3 md:col-start-10 self-end">
+          <div class="label text-stone-dark mb-2">Status</div>
+          <div class="font-body text-base mb-4">{research.topic.status}</div>
+          <div class="label text-stone-dark mb-2">Discipline</div>
+          <div class="font-body text-base">{research.topic.discipline}</div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-12 gap-y-12 md:gap-y-0 gap-x-4 border-t border-ink pt-12 md:pt-16">
+        <div class="col-span-12 md:col-span-6 md:border-r md:border-ink md:pr-8 md:pb-12">
+          <div class="flex items-baseline justify-between border-b border-ink pb-3 mb-6">
+            <span class="label-lg">{research.problem.label}</span>
+            <span class="label tabular text-stone-dark">{research.problem.number}</span>
+          </div>
+          <p class="text-stone-dark leading-relaxed">{research.problem.text}</p>
+        </div>
+
+        <div class="col-span-12 md:col-span-6 md:pl-8 md:pb-12">
+          <div class="flex items-baseline justify-between border-b border-ink pb-3 mb-6">
+            <span class="label-lg">{research.question.label}</span>
+            <span class="label tabular text-stone-dark">{research.question.number}</span>
+          </div>
+          <p class="editorial-lead" set:html={research.question.text.replace('headless low-code', '<em class="font-display italic">headless low-code</em>')} />
+        </div>
+
+        <div class="col-span-12 md:col-span-7 md:border-t md:border-r md:border-ink md:pr-8 md:pt-12">
+          <div class="flex items-baseline justify-between border-b border-ink pb-3 mb-6">
+            <span class="label-lg">{research.direction.label}</span>
+            <span class="label tabular text-stone-dark">{research.direction.number}</span>
+          </div>
+          <p class="text-stone-dark leading-relaxed mb-6">{research.direction.text}</p>
+          <ul class="editorial-list space-y-2 text-sm">
+            {research.direction.points.map((point) => <li>{point}</li>)}
+          </ul>
+        </div>
+
+        <div class="col-span-12 md:col-span-4 md:col-start-9 md:border-t md:border-ink md:pt-12">
+          <div class="flex items-baseline justify-between border-b border-ink pb-3 mb-6">
+            <span class="label-lg">{research.current.label}</span>
+            <span class="label tabular text-stone-dark">{research.current.number}</span>
+          </div>
+          <div class="label text-stone-dark mb-2">Phase</div>
+          <p class="font-body mb-6">{research.current.phase}</p>
+          <div class="label text-stone-dark mb-2">Next</div>
+          <p class="font-body mb-6">{research.current.next}</p>
+          <div class="label text-stone-dark mb-2">Outcome</div>
+          <p class="font-body text-stone-dark text-sm">{research.current.outcome}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 08 — EXPERIENCE ============== -->
+  <section id="experience" class="px-6 md:px-10 py-24 md:py-32 border-t border-ink">
+    <div class="max-w-editorial mx-auto w-full">
+      <div class="flex items-end justify-between gap-6 pb-6 md:pb-8 border-b border-ink mb-12 md:mb-20">
+        <div>
+          <div class="label mb-3">{experience.section.index} — {experience.section.label}</div>
+          <h2 class="font-display font-black text-headline">{experience.section.title}</h2>
+        </div>
+        <div class="label text-stone-dark text-right hidden md:block" set:html={experience.section.asideLines.join('<br />')} />
+      </div>
+
+      <div class="grid grid-cols-12 gap-y-8 md:gap-y-0 gap-x-4 mb-12 md:mb-20">
+        <div class="col-span-12 md:col-span-8">
+          <h3 class="font-display font-black text-display">
+            {experience.section.introTitle.map((line: Line) => (
+              <span class={lineClass(line.style)} style={indentStyle(line.indent)}>{line.text}</span>
+            ))}
+          </h3>
+        </div>
+        <div class="col-span-12 md:col-span-3 md:col-start-10 self-end">
+          <p class="text-stone-dark leading-relaxed">{experience.section.introText}</p>
+        </div>
+      </div>
+
+      <div class="border-t border-ink">
+        {experience.entries.map((entry) => (
+          <div class="grid grid-cols-12 gap-4 py-8 border-b border-ink">
+            <div class="col-span-3 md:col-span-2">
+              <div class="font-display text-2xl md:text-3xl tabular">{entry.year}</div>
+              {entry.yearMeta && <div class="label text-stone-dark mt-1">{entry.yearMeta}</div>}
+            </div>
+            <div class="col-span-1 md:col-span-1 flex justify-center">
+              <div class="w-px bg-ink h-full"></div>
+            </div>
+            <div class="col-span-8 md:col-span-9">
+              <div class="label text-stone-dark mb-2">{entry.category}</div>
+              <h4 class="font-display font-bold text-xl md:text-2xl mb-2">{entry.title}</h4>
+              <p class="text-stone-dark text-sm leading-relaxed max-w-2xl">{entry.description}</p>
+            </div>
+          </div>
+        ))}
+
+        <!-- Open placeholder row -->
+        <div class="grid grid-cols-12 gap-4 py-8">
+          <div class="col-span-3 md:col-span-2">
+            <div class="font-display text-2xl md:text-3xl tabular text-stone-dark">—</div>
+            <div class="label text-stone-dark mt-1">To be added</div>
+          </div>
+          <div class="col-span-1 md:col-span-1 flex justify-center">
+            <div class="w-px bg-stone-mid h-full"></div>
+          </div>
+          <div class="col-span-8 md:col-span-9">
+            <div class="label text-stone-dark mb-2">Additional entries</div>
+            <h4 class="font-display font-bold text-xl md:text-2xl mb-2 text-stone-dark">Internship, organisational &amp; certification entries</h4>
+            <p class="text-stone-dark text-sm leading-relaxed max-w-2xl">
+              Placeholder for additional entries as they become available. Structure is intentionally left open for future population.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 09 — TOOLKIT ============== -->
+  <section id="toolkit" class="px-6 md:px-10 py-24 md:py-32 border-t border-ink bg-stone-light">
+    <div class="max-w-editorial mx-auto w-full">
+      <div class="flex items-end justify-between gap-6 pb-6 md:pb-8 border-b border-ink mb-12 md:mb-20">
+        <div>
+          <div class="label mb-3">{toolkit.section.index} — {toolkit.section.label}</div>
+          <h2 class="font-display font-black text-headline">{toolkit.section.title}</h2>
+        </div>
+        <div class="label text-stone-dark text-right hidden md:block" set:html={toolkit.section.asideLines.join('<br />')} />
+      </div>
+
+      <div class="grid grid-cols-12 gap-y-8 md:gap-y-0 gap-x-4 mb-12 md:mb-16">
+        <div class="col-span-12 md:col-span-7">
+          <p class="editorial-lead">{toolkit.section.intro}</p>
+        </div>
+        <div class="col-span-12 md:col-span-3 md:col-start-10 self-end">
+          <div class="label text-stone-dark" set:html={toolkit.section.asideNoteLines.join('<br />')} />
+        </div>
+      </div>
+
+      <div class="grid grid-cols-12 gap-y-12 md:gap-y-0 gap-x-4 border-t border-ink pt-12">
+        {toolkit.columns.map((col, i) => (
+          <div class:list={[
+            'col-span-12 md:col-span-4',
+            i < 2 ? 'md:border-r md:border-ink' : '',
+            i === 0 ? 'md:pr-6' : '',
+            i === 1 ? 'md:pr-6 md:pl-6' : '',
+            i === 2 ? 'md:pl-6' : '',
+          ]}>
+            <div class="flex items-baseline justify-between border-b border-ink pb-3 mb-6">
+              <span class:list={['font-display text-3xl md:text-4xl font-black', col.italic && 'italic']}>{col.title}</span>
+              <span class="label tabular text-stone-dark">{col.letter}</span>
+            </div>
+            <ul class="space-y-4">
+              {col.items.map((item, j) => (
+                <li class:list={['font-body text-lg md:text-xl', j < col.items.length - 1 ? 'border-b border-stone-mid pb-3' : '']}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 10 — CONTACT (inverted) ============== -->
+  <section id="contact" class="inverted px-6 md:px-10 py-24 md:py-40 border-t border-paper">
+    <div class="max-w-editorial mx-auto w-full">
+      <div class="flex items-start justify-between gap-6 pb-6 md:pb-8 border-b border-paper mb-12 md:mb-20">
+        <div class="flex flex-col gap-1">
+          <span class="label">{contact.section.index} — {contact.section.label}</span>
+          <span class="label text-stone-mid">{contact.section.volumeLabel}</span>
+        </div>
+        <div class="flex flex-col gap-1 text-right">
+          <span class="label">{contact.section.topRightLabel}</span>
+          <span class="label text-stone-mid">{contact.section.topRightSub}</span>
+        </div>
+      </div>
+
+      <div class="mb-12 md:mb-20">
+        <h2 class="font-display font-black text-mega">
+          {contact.headlineLines.map((line: Line) => (
+            <span class={lineClass(line.style)} style={indentStyle(line.indent)}>{line.text}</span>
+          ))}
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-12 gap-y-8 md:gap-y-0 gap-x-4 mb-16 md:mb-24 pt-8 border-t border-paper">
+        <div class="col-span-12 md:col-span-7">
+          <p class="editorial-lead">{contact.lead}</p>
+        </div>
+        <div class="col-span-12 md:col-span-3 md:col-start-10 self-end">
+          <div class="label text-stone-mid mb-2">{contact.responseLabel}</div>
+          <div class="font-body">{contact.responseTime}</div>
+        </div>
+      </div>
+
+      <div class="border-t border-paper">
+        {contact.links.map((link) => (
+          <a href={link.href} class="group grid grid-cols-12 gap-4 py-6 md:py-8 border-b border-paper items-center transition-colors hover:bg-stone-dark">
+            <div class="col-span-3 md:col-span-2">
+              <span class="label text-stone-mid group-hover:text-paper">{link.letter}. {link.label}</span>
+            </div>
+            <div class="col-span-7 md:col-span-8">
+              <span class="font-display text-xl md:text-3xl link-underline">{link.display}</span>
+            </div>
+            <div class="col-span-2 md:col-span-2 text-right">
+              <span class="label project-row-arrow inline-block">→</span>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <div class="grid grid-cols-12 gap-4 mt-16 md:mt-24 pt-8 border-t border-paper">
+        <div class="col-span-12 md:col-span-6">
+          <p class="font-display italic text-lg md:text-xl text-stone-mid">{contact.signOff}</p>
+        </div>
+        <div class="col-span-12 md:col-span-3 md:col-start-10 self-end md:text-right">
+          <span class="label text-stone-mid">{contact.signature}</span>
+        </div>
+      </div>        </div>
+      </section>
+</BaseLayout>

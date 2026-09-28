@@ -1,0 +1,22 @@
+{
+  "id": "hero",
+  "meta": {
+    "indexLabel": "01 — Introduction",
+    "portfolioLabel": "Portfolio — Index 2026",
+    "volumeLabel": "Volume 01 / Edition I",
+    "locationLabel": "Indonesia · GMT+7",
+    "availabilityLabel": "Available for select projects"
+  },
+  "nameLines": [
+    { "text": "Rusydi", "style": "default", "indent": 0 },
+    { "text": "Jabir", "style": "italic", "indent": 14 },
+    { "text": "Al-Awfa.", "style": "default", "indent": 6 }
+  ],
+  "lead": "Software Developer & Graphic Designer building digital products at the intersection of engineering and visual communication.",
+  "cta": [
+    { "label": "Explore Work", "arrow": "↓", "href": "#work" },
+    { "label": "Get in touch", "arrow": "→", "href": "#contact" }
+  ],
+  "scrollHint": "Scroll to begin",
+  "pageMarker": "001 / 010"
+}

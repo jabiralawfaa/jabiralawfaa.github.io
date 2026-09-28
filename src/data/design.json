@@ -1,0 +1,45 @@
+{
+  "section": {
+    "index": "05",
+    "label": "Design",
+    "title": "Visual Work",
+    "asideLines": ["Selected", "visual projects"],
+    "introTitle": [
+      { "text": "Design is not", "style": "default", "indent": 0 },
+      { "text": "a secondary", "style": "italic", "indent": 0 },
+      { "text": "practice.", "style": "default", "indent": 0 }
+    ],
+    "introText": "The visual work below is selected from album covers, posters, social media design, and personal artwork. It is presented without framings or extraneous UI — the images are the work."
+  },
+  "series": [
+    {
+      "label": "Series · 01",
+      "title": "Cover Studies",
+      "description": "A study in typographic covers exploring weight, contrast, and the threshold where lettering becomes image.",
+      "meta": "2026 · Graphic Design",
+      "image": "https://picsum.photos/seed/design-large-one/1600/1000",
+      "imageAlt": "Large editorial design composition"
+    }
+  ],
+  "covers": [
+    { "label": "Cover · A", "number": "001", "src": "https://picsum.photos/seed/album-cover-a/800/800", "alt": "Album cover design A" },
+    { "label": "Cover · B", "number": "002", "src": "https://picsum.photos/seed/album-cover-b/800/800", "alt": "Album cover design B" },
+    { "label": "Cover · C", "number": "003", "src": "https://picsum.photos/seed/album-cover-c/800/800", "alt": "Album cover design C" },
+    { "label": "Cover · D", "number": "004", "src": "https://picsum.photos/seed/album-cover-d/800/800", "alt": "Album cover design D" }
+  ],
+  "approach": {
+    "label": "Approach",
+    "title": "Composition over decoration.",
+    "text": "Each piece is approached as a structural problem before it is a stylistic one. Hierarchy, rhythm, and negative space are decided before any colour or texture enters."
+  },
+  "posters": [
+    { "label": "Poster · 001", "meta": "2026", "src": "https://picsum.photos/seed/poster-portrait-a/800/1067", "alt": "Portrait poster design A" },
+    { "label": "Poster · 002", "meta": "2026", "src": "https://picsum.photos/seed/poster-portrait-b/800/1067", "alt": "Portrait poster design B" }
+  ],
+  "banner": {
+    "label": "Series · 02 — Banner Study",
+    "meta": "2026 · 005",
+    "src": "https://picsum.photos/seed/design-banner/2400/1030",
+    "alt": "Wide banner design composition"
+  }
+}

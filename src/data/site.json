@@ -1,0 +1,27 @@
+{
+  "meta": {
+    "title": "Rusydi Jabir Al-awfa — Software Developer & Graphic Designer",
+    "description": "Portfolio of Rusydi Jabir Al-awfa — a software developer and graphic designer working at the intersection of engineering and visual communication.",
+    "logo": "RJA."
+  },
+  "nav": [
+    { "number": "03", "label": "Work", "href": "#work" },
+    { "number": "04", "label": "Development", "href": "#development" },
+    { "number": "05", "label": "Design", "href": "#design" },
+    { "number": "06", "label": "Lab", "href": "#lab" },
+    { "number": "07", "label": "Research", "href": "#research" }
+  ],
+  "ctaLabel": "Available",
+  "footer": {
+    "name": "Rusydi Jabir Al-awfa",
+    "role": "Software Developer & Graphic Designer",
+    "elsewhere": [
+      { "label": "GitHub", "href": "https://github.com/jabiralawfaa" },
+      { "label": "LinkedIn", "href": "#" },
+      { "label": "Instagram", "href": "#" }
+    ],
+    "edition": "Edition I · Volume 01",
+    "marker": "001 / 010",
+    "tagline": "Built with intention · No template"
+  }
+}

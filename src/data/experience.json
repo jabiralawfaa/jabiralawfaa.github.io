@@ -1,0 +1,48 @@
+{
+  "section": {
+    "index": "08",
+    "label": "Experience & Learning",
+    "title": "Trajectory",
+    "asideLines": ["A record of", "progression"],
+    "introTitle": [
+      { "text": "Progression", "style": "default", "indent": 0 },
+      { "text": "over", "style": "italic", "indent": 0 },
+      { "text": "promotion.", "style": "default", "indent": 0 }
+    ],
+    "introText": "A non-exhaustive index of where the work has come from and where it is currently heading. Emphasis on direction rather than accomplishment."
+  },
+  "entries": [
+    {
+      "year": "2026",
+      "yearMeta": "— Current",
+      "category": "Academic Research",
+      "title": "Headless Low-Code Web Application Builder",
+      "description": "Investigating abstraction layers and headless architecture for low-code web application builders. Architecture mapping and literature review phase."
+    },
+    {
+      "year": "2026",
+      "yearMeta": "— Current",
+      "category": "Frontend Development",
+      "title": "React & Modern Web Interfaces",
+      "description": "Building web applications and interfaces with React and Vite. Focused on accessible UI implementation and design-to-code fidelity."
+    },
+    {
+      "year": "2025",
+      "category": "Web Application Development",
+      "title": "Laravel & PHP",
+      "description": "Building full-stack web applications with Laravel and PHP. Practical experience with routing, Eloquent, authentication, and structured backend implementation."
+    },
+    {
+      "year": "2025",
+      "category": "Graphic Design Practice",
+      "title": "Visual Identity & Artwork",
+      "description": "Ongoing graphic design practice — album covers, posters, social media design. Building visual literacy alongside development work."
+    },
+    {
+      "year": "2024",
+      "category": "Foundations",
+      "title": "Programming & Web Fundamentals",
+      "description": "Building foundational understanding of web technologies, programming patterns, and the relationship between front-end and back-end systems."
+    }
+  ]
+}

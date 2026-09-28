@@ -1,0 +1,479 @@
+# Pages CMS configuration
+# Edit content at https://app.pagescms.org — sign in with GitHub, pick this repo.
+# Every save commits to main, which triggers the Deploy workflow automatically.
+
+media:
+  input: public/img
+  output: /img
+
+content:
+
+  # ---------- Global ----------
+  - name: site
+    label: Site & Navigation
+    type: file
+    path: src/data/site.json
+    fields:
+      - name: meta
+        type: object
+        fields:
+          - { name: title, label: Page title, type: string }
+          - { name: description, label: Meta description, type: text }
+          - { name: logo, label: Header logo text, type: string }
+      - name: nav
+        type: object
+        list: true
+        fields:
+          - { name: number, label: Number, type: string }
+          - { name: label, label: Label, type: string }
+          - { name: href, label: Link, type: string }
+      - { name: ctaLabel, label: Header CTA, type: string }
+      - name: footer
+        type: object
+        fields:
+          - { name: name, label: Name, type: string }
+          - { name: role, label: Role, type: string }
+          - name: elsewhere
+            type: object
+            list: true
+            fields:
+              - { name: label, label: Label, type: string }
+              - { name: href, label: Link, type: string }
+          - { name: edition, label: Edition label, type: string }
+          - { name: marker, label: Page marker, type: string }
+          - { name: tagline, label: Tagline, type: string }
+
+  # ---------- Hero ----------
+  - name: hero
+    label: Hero
+    type: file
+    path: src/data/hero.json
+    fields:
+      - name: meta
+        type: object
+        fields:
+          - { name: indexLabel, label: Section label, type: string }
+          - { name: portfolioLabel, label: Portfolio label, type: string }
+          - { name: volumeLabel, label: Volume label, type: string }
+          - { name: locationLabel, label: Location, type: string }
+          - { name: availabilityLabel, label: Availability, type: string }
+      - name: nameLines
+        label: Name lines
+        type: object
+        list: true
+        fields:
+          - { name: text, label: Text, type: string }
+          - name: style
+            label: Style
+            type: select
+            options:
+              values: [default, italic]
+          - { name: indent, label: Indent (%), type: number }
+      - { name: lead, label: Lead paragraph, type: text }
+      - name: cta
+        label: Buttons
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Label, type: string }
+          - { name: arrow, label: Arrow, type: string }
+          - { name: href, label: Link, type: string }
+      - { name: scrollHint, label: Scroll hint, type: string }
+      - { name: pageMarker, label: Page marker, type: string }
+
+  # ---------- About ----------
+  - name: about
+    label: About
+    type: file
+    path: src/data/about.json
+    fields:
+      - name: section
+        type: object
+        fields:
+          - { name: index, label: Section number, type: string }
+          - { name: label, label: Section label, type: string }
+          - { name: title, label: Title, type: string }
+      - name: statementLines
+        label: Big statement
+        type: object
+        list: true
+        fields:
+          - { name: text, label: Text, type: string }
+          - name: style
+            label: Style
+            type: select
+            options:
+              values: [default, italic]
+          - { name: indent, label: Indent (%), type: number }
+      - { name: lead, label: Lead paragraph, type: text }
+      - { name: supporting, label: Supporting paragraph, type: text }
+      - name: meta
+        label: Facts
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Label, type: string }
+          - { name: value, label: Value, type: string }
+
+  # ---------- Projects ----------
+  - name: projects
+    label: Projects
+    type: file
+    path: src/data/projects.json
+    fields:
+      - name: section
+        type: object
+        fields:
+          - { name: index, label: Section number, type: string }
+          - { name: label, label: Section label, type: string }
+          - { name: title, label: Title, type: string }
+          - { name: intro, label: Intro paragraph, type: text }
+          - { name: dateRange, label: Years range, type: string }
+      - name: featured
+        label: Featured project
+        type: object
+        fields:
+          - { name: category, label: Category, type: string }
+          - { name: title, label: Title, type: string }
+          - { name: description, label: Description, type: text }
+          - { name: stack, label: Stack, type: string }
+          - { name: year, label: Year, type: string }
+          - { name: type, label: Type, type: string }
+          - { name: role, label: Role, type: string }
+          - { name: image, label: Cover image, type: image }
+          - { name: imageAlt, label: Image alt text, type: string }
+          - { name: ctaLabel, label: Button label, type: string }
+          - { name: href, label: Button link, type: string }
+      - name: projects
+        label: Project list
+        type: object
+        list: true
+        fields:
+          - { name: index, label: Number, type: string }
+          - { name: title, label: Title, type: string }
+          - { name: description, label: Description, type: text }
+          - { name: stack, label: Stack, type: string }
+          - { name: year, label: Year, type: string }
+          - { name: href, label: Link, type: string }
+      - name: album
+        label: Album artwork project
+        type: object
+        fields:
+          - { name: category, label: Category, type: string }
+          - { name: title, label: Title, type: string }
+          - { name: description, label: Description, type: text }
+          - { name: discipline, label: Discipline, type: string }
+          - { name: year, label: Year, type: string }
+          - { name: image, label: Cover image, type: image }
+          - { name: imageAlt, label: Image alt text, type: string }
+          - { name: ctaLabel, label: Button label, type: string }
+          - { name: href, label: Button link, type: string }
+      - name: research
+        label: Research teaser
+        type: object
+        fields:
+          - { name: label, label: Label, type: string }
+          - { name: title, label: Title, type: string }
+          - { name: subtitle, label: Subtitle, type: string }
+          - name: tags
+            label: Tags
+            type: string
+            list: true
+          - { name: description, label: Description, type: text }
+          - { name: image, label: Background image, type: image }
+          - { name: imageAlt, label: Image alt text, type: string }
+          - { name: ctaLabel, label: Link label, type: string }
+          - { name: href, label: Link, type: string }
+      - name: posters
+        label: Generative posters
+        type: object
+        fields:
+          - { name: category, label: Category, type: string }
+          - { name: title, label: Title, type: string }
+          - { name: description, label: Description, type: text }
+          - name: images
+            type: object
+            list: true
+            fields:
+              - { name: src, label: Image, type: image }
+              - { name: alt, label: Alt text, type: string }
+
+  # ---------- Stack ----------
+  - name: stack
+    label: Stack
+    type: file
+    path: src/data/stack.json
+    fields:
+      - name: section
+        type: object
+        fields:
+          - { name: index, label: Section number, type: string }
+          - { name: label, label: Section label, type: string }
+          - { name: title, label: Title, type: string }
+          - { name: intro, label: Intro paragraph, type: text }
+      - name: groups
+        label: Technology groups
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Group label, type: string }
+          - { name: itemsLabel, label: Count label, type: string }
+          - name: items
+            label: Items
+            type: object
+            list: true
+            fields:
+              - { name: name, label: Name, type: string }
+              - { name: role, label: Role, type: string }
+      - name: marquee
+        label: Marquee items
+        type: string
+        list: true
+
+  # ---------- Design ----------
+  - name: design
+    label: Design Gallery
+    type: file
+    path: src/data/design.json
+    fields:
+      - name: section
+        type: object
+        fields:
+          - { name: index, label: Section number, type: string }
+          - { name: label, label: Section label, type: string }
+          - { name: title, label: Title, type: string }
+          - { name: introText, label: Intro text, type: text }
+      - name: series
+        label: Series (large)
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Label, type: string }
+          - { name: title, label: Title, type: string }
+          - { name: description, label: Description, type: text }
+          - { name: meta, label: Meta, type: string }
+          - { name: image, label: Image, type: image }
+          - { name: imageAlt, label: Alt text, type: string }
+      - name: covers
+        label: Album covers
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Label, type: string }
+          - { name: number, label: Number, type: string }
+          - { name: src, label: Image, type: image }
+          - { name: alt, label: Alt text, type: string }
+      - name: approach
+        label: Approach block
+        type: object
+        fields:
+          - { name: label, label: Label, type: string }
+          - { name: title, label: Title, type: string }
+          - { name: text, label: Text, type: text }
+      - name: posters
+        label: Posters
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Label, type: string }
+          - { name: meta, label: Meta, type: string }
+          - { name: src, label: Image, type: image }
+          - { name: alt, label: Alt text, type: string }
+      - name: banner
+        label: Wide banner
+        type: object
+        fields:
+          - { name: label, label: Label, type: string }
+          - { name: meta, label: Meta, type: string }
+          - { name: src, label: Image, type: image }
+          - { name: alt, label: Alt text, type: string }
+
+  # ---------- Lab ----------
+  - name: lab
+    label: Creative Lab
+    type: file
+    path: src/data/lab.json
+    fields:
+      - name: section
+        type: object
+        fields:
+          - { name: index, label: Section number, type: string }
+          - { name: label, label: Section label, type: string }
+          - { name: title, label: Title, type: string }
+          - { name: introText, label: Intro text, type: text }
+      - name: experiments
+        label: Experiments
+        type: object
+        list: true
+        fields:
+          - { name: id, label: ID (e01..e05), type: string }
+          - { name: label, label: Label, type: string }
+          - { name: number, label: Number, type: string }
+          - { name: title, label: Title, type: string }
+          - { name: description, label: Description, type: text }
+          - { name: image, label: Image, type: image }
+          - { name: imageAlt, label: Alt text, type: string }
+          - name: size
+            label: Layout size
+            type: select
+            options:
+              values: [half, third]
+
+  # ---------- Research ----------
+  - name: research
+    label: Research
+    type: file
+    path: src/data/research.json
+    fields:
+      - name: section
+        type: object
+        fields:
+          - { name: index, label: Section number, type: string }
+          - { name: label, label: Section label, type: string }
+          - { name: title, label: Title, type: string }
+      - name: topic
+        label: Research topic
+        type: object
+        fields:
+          - { name: label, label: Label, type: string }
+          - name: titleLines
+            label: Title lines
+            type: object
+            list: true
+            fields:
+              - { name: text, label: Text, type: string }
+              - name: style
+                label: Style
+                type: select
+                options:
+                  values: [default, italic]
+              - { name: indent, label: Indent (%), type: number }
+          - { name: status, label: Status, type: string }
+          - { name: discipline, label: Discipline, type: string }
+      - name: problem
+        label: A. Problem
+        type: object
+        fields:
+          - { name: label, label: Label, type: string }
+          - { name: number, label: Number, type: string }
+          - { name: text, label: Text, type: text }
+      - name: question
+        label: B. Question
+        type: object
+        fields:
+          - { name: label, label: Label, type: string }
+          - { name: number, label: Number, type: string }
+          - { name: text, label: Text, type: text }
+      - name: direction
+        label: C. Direction
+        type: object
+        fields:
+          - { name: label, label: Label, type: string }
+          - { name: number, label: Number, type: string }
+          - { name: text, label: Text, type: text }
+          - name: points
+            label: Key points
+            type: string
+            list: true
+      - name: current
+        label: D. Current status
+        type: object
+        fields:
+          - { name: label, label: Label, type: string }
+          - { name: number, label: Number, type: string }
+          - { name: phase, label: Phase, type: string }
+          - { name: next, label: Next step, type: string }
+          - { name: outcome, label: Outcome, type: text }
+
+  # ---------- Experience ----------
+  - name: experience
+    label: Experience
+    type: file
+    path: src/data/experience.json
+    fields:
+      - name: section
+        type: object
+        fields:
+          - { name: index, label: Section number, type: string }
+          - { name: label, label: Section label, type: string }
+          - { name: title, label: Title, type: string }
+          - { name: introText, label: Intro text, type: text }
+      - name: entries
+        label: Timeline entries
+        type: object
+        list: true
+        fields:
+          - { name: year, label: Year, type: string }
+          - { name: yearMeta, label: Year note (optional), type: string, required: false }
+          - { name: category, label: Category, type: string }
+          - { name: title, label: Title, type: string }
+          - { name: description, label: Description, type: text }
+
+  # ---------- Toolkit ----------
+  - name: toolkit
+    label: Toolkit
+    type: file
+    path: src/data/toolkit.json
+    fields:
+      - name: section
+        type: object
+        fields:
+          - { name: index, label: Section number, type: string }
+          - { name: label, label: Section label, type: string }
+          - { name: title, label: Title, type: string }
+          - { name: intro, label: Intro paragraph, type: text }
+      - name: columns
+        label: Capability columns
+        type: object
+        list: true
+        fields:
+          - { name: letter, label: Letter, type: string }
+          - { name: title, label: Title, type: string }
+          - name: italic
+            label: Italic title
+            type: boolean
+          - name: items
+            label: Items
+            type: string
+            list: true
+
+  # ---------- Contact ----------
+  - name: contact
+    label: Contact
+    type: file
+    path: src/data/contact.json
+    fields:
+      - name: section
+        type: object
+        fields:
+          - { name: index, label: Section number, type: string }
+          - { name: label, label: Section label, type: string }
+          - { name: volumeLabel, label: Volume label, type: string }
+          - { name: topRightLabel, label: Top right label, type: string }
+          - { name: topRightSub, label: Top right sublabel, type: string }
+      - name: headlineLines
+        label: Headline
+        type: object
+        list: true
+        fields:
+          - { name: text, label: Text, type: string }
+          - name: style
+            label: Style
+            type: select
+            options:
+              values: [default, italic]
+          - { name: indent, label: Indent (%), type: number }
+      - { name: lead, label: Lead paragraph, type: text }
+      - { name: responseLabel, label: Response label, type: string }
+      - { name: responseTime, label: Response time, type: string }
+      - name: links
+        label: Contact links
+        type: object
+        list: true
+        fields:
+          - { name: letter, label: Letter, type: string }
+          - { name: label, label: Label, type: string }
+          - { name: display, label: Display text, type: string }
+          - { name: href, label: Link, type: string }
+      - { name: signOff, label: Sign-off, type: string }
+      - { name: signature, label: Signature, type: string }

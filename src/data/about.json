@@ -1,0 +1,21 @@
+{
+  "section": {
+    "index": "02",
+    "label": "Profile",
+    "title": "About",
+    "asideLines": ["The person", "behind the work"]
+  },
+  "statementLines": [
+    { "text": "Code", "style": "default", "indent": 0 },
+    { "text": "meets", "style": "italic", "indent": 8 },
+    { "text": "Design.", "style": "default", "indent": 0 }
+  ],
+  "lead": "I am a software developer with a parallel life in visual design. My work moves between frontend engineering, interface implementation, and graphic composition — treating each as part of the same practice rather than separate disciplines.",
+  "supporting": "I build web applications with React and Laravel, design identities and artwork, and run small experiments in music and creative coding. The space where engineering and visual thinking overlap is where I am most useful.",
+  "meta": [
+    { "label": "Based", "value": "Indonesia" },
+    { "label": "Focus", "value": "Frontend · Design" },
+    { "label": "Stack", "value": "React · Laravel" },
+    { "label": "Status", "value": "Open to work" }
+  ]
+}

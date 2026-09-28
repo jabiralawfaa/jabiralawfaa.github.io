@@ -1,0 +1,47 @@
+{
+  "section": {
+    "index": "07",
+    "label": "Research",
+    "title": "Thinking",
+    "asideLines": ["Academic", "direction"]
+  },
+  "topic": {
+    "label": "Research Topic",
+    "titleLines": [
+      { "text": "Headless", "style": "default", "indent": 0 },
+      { "text": "Low-Code", "style": "italic", "indent": 0 },
+      { "text": "Web Application", "style": "default", "indent": 0 },
+      { "text": "Builder.", "style": "default", "indent": 0 }
+    ],
+    "status": "In progress",
+    "discipline": "Software Architecture"
+  },
+  "problem": {
+    "label": "A. Research Problem",
+    "number": "01",
+    "text": "Low-code platforms accelerate delivery but often produce systems that are tightly coupled, opaque, and difficult to extend beyond their original boundaries. The problem is not speed — it is the lack of architectural clarity underneath."
+  },
+  "question": {
+    "label": "B. Research Question",
+    "number": "02",
+    "text": "How can a headless low-code web application builder be architected so that its abstraction layers remain composable, replaceable, and decoupled from any specific presentation surface?"
+  },
+  "direction": {
+    "label": "C. Research Direction",
+    "number": "03",
+    "text": "The direction treats the builder as a set of independent layers — modelling, schema, runtime, and rendering — each with explicit contracts. The goal is not to build another platform, but to describe an architecture that other builders could adopt.",
+    "points": [
+      "Layered abstraction model",
+      "Headless content & schema separation",
+      "Replaceable rendering surfaces",
+      "Explicit runtime contracts"
+    ]
+  },
+  "current": {
+    "label": "D. Current",
+    "number": "04",
+    "phase": "Architecture mapping & literature review",
+    "next": "Reference implementation prototype",
+    "outcome": "No results yet. This section will be updated as the research progresses."
+  }
+}

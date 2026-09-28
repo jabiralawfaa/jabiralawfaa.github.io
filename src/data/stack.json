@@ -1,0 +1,56 @@
+{
+  "section": {
+    "index": "04",
+    "label": "Development",
+    "title": "The Stack",
+    "asideLines": ["Technologies", "in use"],
+    "intro": "The list below is not a logo grid. It is an index of the technologies I currently use to build, ship, and maintain software — grouped by role within the stack.",
+    "asideNoteLines": ["Indexed by", "category & layer"]
+  },
+  "groups": [
+    {
+      "id": "frontend",
+      "label": "A. Frontend",
+      "itemsLabel": "06 items",
+      "items": [
+        { "name": "HTML", "role": "Markup" },
+        { "name": "CSS", "role": "Styling" },
+        { "name": "JavaScript", "role": "Language" },
+        { "name": "React", "role": "UI Library" },
+        { "name": "Vite", "role": "Build Tool" },
+        { "name": "Bootstrap", "role": "Framework" }
+      ]
+    },
+    {
+      "id": "backend",
+      "label": "B. Backend",
+      "itemsLabel": "02 items",
+      "items": [
+        { "name": "PHP", "role": "Language" },
+        { "name": "Laravel", "role": "Framework" }
+      ]
+    },
+    {
+      "id": "database",
+      "label": "C. Database & Services",
+      "itemsLabel": "02 items",
+      "items": [
+        { "name": "Firebase", "role": "Platform" },
+        { "name": "Firestore", "role": "Database" }
+      ]
+    },
+    {
+      "id": "tools",
+      "label": "D. Tools & Workflow",
+      "itemsLabel": "04 items",
+      "wide": true,
+      "items": [
+        { "name": "Git", "role": "Version Control" },
+        { "name": "GitHub", "role": "Collaboration" },
+        { "name": "Figma", "role": "Design" },
+        { "name": "VS Code", "role": "Editor" }
+      ]
+    }
+  ],
+  "marquee": ["React", "Laravel", "JavaScript", "PHP", "Vite", "Firebase", "Figma"]
+}
