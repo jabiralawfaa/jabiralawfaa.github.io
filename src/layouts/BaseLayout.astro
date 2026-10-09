@@ -22,6 +22,20 @@ const year = new Date().getFullYear();
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script is:inline>
+      (() => {
+        let theme = null;
+        try {
+          theme = localStorage.getItem("theme");
+        } catch {}
+        if (theme !== "light" && theme !== "dark") {
+          theme = matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        }
+        document.documentElement.classList.toggle("dark", theme === "dark");
+      })();
+    </script>
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -55,10 +69,49 @@ const year = new Date().getFullYear();
           ))}
         </nav>
 
-        <a href="#contact" class="label border border-ink px-3 py-2 hover-invert inline-flex items-center gap-2">
-          <span class="w-1.5 h-1.5 bg-ink"></span>
-          {ctaLabel}
-        </a>
+        <div class="flex items-center gap-3">
+          <button
+            id="theme-toggle"
+            type="button"
+            class="label border border-ink px-3 py-2 hover-invert inline-flex items-center justify-center"
+            aria-label="Toggle color theme"
+          >
+            <svg
+              class="icon-sun"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="4"></circle>
+              <path
+                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"
+              ></path>
+            </svg>
+            <svg
+              class="icon-moon"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              aria-hidden="true"
+            >
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+          </button>
+
+          <a href="#contact" class="label border border-ink px-3 py-2 hover-invert inline-flex items-center gap-2">
+            <span class="w-1.5 h-1.5 bg-ink"></span>
+            {ctaLabel}
+          </a>
+        </div>
       </div>
     </header>
 
@@ -105,5 +158,17 @@ const year = new Date().getFullYear();
         </div>
       </div>
     </footer>
+
+    <script is:inline>
+      (() => {
+        const root = document.documentElement;
+        document.getElementById("theme-toggle")?.addEventListener("click", () => {
+          const isDark = root.classList.toggle("dark");
+          try {
+            localStorage.setItem("theme", isDark ? "dark" : "light");
+          } catch {}
+        });
+      })();
+    </script>
   </body>
 </html>

@@ -14,6 +14,16 @@
   --breakpoint-editorial: 72rem;
 }
 
+/* ===== Dark mode: full inversion (class .dark on <html>) ===== */
+.dark {
+  --color-ink: #ffffff;
+  --color-paper: #000000;
+  --color-stone-light: #1c1c1c;
+  --color-stone-mid: #2a2a2a;
+  --color-stone-dark: #a3a3a3;
+  color-scheme: dark;
+}
+
 /* ===== Editorial base (ported from the original index.html) ===== */
 
 /* Strict zero radius */
@@ -25,6 +35,18 @@
 
 html {
   scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+/* Synchronized theme flip; disabled by the reduced-motion block below */
+@media (prefers-reduced-motion: no-preference) {
+  html,
+  html * {
+    transition:
+      background-color 0.25s ease,
+      color 0.25s ease,
+      border-color 0.25s ease;
+  }
 }
 
 body {
@@ -184,6 +206,12 @@ body {
   background: var(--color-ink);
   color: var(--color-paper);
 }
+/* Stays black in dark mode, pinned so it never merges with the page bg */
+.dark .inverted {
+  background: #000000;
+  color: #ffffff;
+  border-color: #ffffff;
+}
 
 /* Marquee for tech */
 @keyframes marquee {
@@ -225,6 +253,20 @@ body {
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: saturate(140%) blur(8px);
   -webkit-backdrop-filter: saturate(140%) blur(8px);
+}
+.dark .header-bg {
+  background: rgba(0, 0, 0, 0.92);
+}
+
+/* Theme toggle icons: pure CSS swap, no JS */
+.icon-moon {
+  display: none;
+}
+.dark .icon-sun {
+  display: none;
+}
+.dark .icon-moon {
+  display: block;
 }
 
 /* Touch target minimum */
