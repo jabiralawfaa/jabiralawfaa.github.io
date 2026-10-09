@@ -12,7 +12,8 @@ const {
   description = site.meta.description,
 } = Astro.props;
 
-const { logo, nav, ctaLabel, footer } = site;
+const { nav, ctaLabel, footer } = site;
+const { logo } = site.meta;
 const year = new Date().getFullYear();
 ---
 
