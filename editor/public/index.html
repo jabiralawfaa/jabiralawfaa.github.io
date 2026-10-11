@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content Editor — jabiralawfaa.github.io</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <aside id="sidebar">
+    <div class="brand">
+      <div class="brand-title">Content Editor</div>
+      <div class="brand-sub">src/data · GitHub API</div>
+    </div>
+    <nav id="file-list" aria-label="Data files"></nav>
+    <div id="config-line" class="config-line" aria-live="polite"></div>
+  </aside>
+
+  <main id="main">
+    <header id="topbar">
+      <div class="topbar-text">
+        <div class="topbar-row">
+          <h1 id="file-title">…</h1>
+          <span id="dirty-flag" class="dirty-flag" hidden>● unsaved</span>
+        </div>
+        <div id="file-meta" class="file-meta"></div>
+      </div>
+      <span id="row-count" class="row-count" title="Editable rows on this page"></span>
+    </header>
+    <p class="plain-hint" role="note">
+      <strong>Plain text only.</strong> The live site shows content exactly as typed —
+      HTML tags would appear as literal text. Use the <em>Style → italic</em> control on headline lines for emphasis.
+    </p>
+    <form id="form" autocomplete="off" novalidate></form>
+  </main>
+
+  <div id="statusbar">
+    <div id="status-wrap">
+      <div id="status" class="status" aria-live="polite"></div>
+      <ul id="issues" class="issues" hidden></ul>
+    </div>
+    <button id="save-btn" type="button" class="btn btn-primary">Save</button>
+  </div>
+
+  <div id="toast-wrap" aria-live="polite"></div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
