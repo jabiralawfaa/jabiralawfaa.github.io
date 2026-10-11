@@ -6,6 +6,16 @@
   },
   "nav": [
     {
+      "number": "01",
+      "label": "Introduction",
+      "href": "#hero"
+    },
+    {
+      "number": "02",
+      "label": "About",
+      "href": "#about"
+    },
+    {
       "number": "03",
       "label": "Work",
       "href": "#work"
